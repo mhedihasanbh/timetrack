@@ -1,0 +1,54 @@
+/*==========================
+  RESPOSIVE CSS CODE
+===========================*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+   
+  }
+  
+  /* Small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+    .chart-area,.project-box
+    {
+      margin-bottom: 40px;
+     }
+     .productivity-bar-area{
+      margin-bottom: 40px;
+     }
+     .project-top{
+      margin-top: 20px;
+     }
+     .app-productivty small{
+      padding: 10px;
+     }
+     .time-format-wrapper{
+      justify-content: space-between;
+     }
+
+     .board-project-task {
+      width: 100%!important;
+    }
+    .screenshot-image{
+      margin-bottom: 12px;
+    }
+  }
+  
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 991.98px) {
+    
+    .navbar-item {
+     display: none;
+  }
+  .right-toggle{
+    display:block;
+}
+
+  }
+  
+  /* X-Large devices (large desktops, less than 1400px) */
+  @media (max-width: 1399.98px) {
+   
+  }
+  
+  
