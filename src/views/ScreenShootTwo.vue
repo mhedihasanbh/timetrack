@@ -1,63 +1,264 @@
 <template>
-   
-          <div class="project-top-item bg-white p-4 rounded-3">
-            <form action="" method="" class="d-flex space-between">
-              <div>
-                <select class="form-select select-bg border-none" aria-label="Default select example">
-                  <option selected>All List</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div class="task-export">
-                <a href="">
-                  <i class="fa-solid fa-cloud-arrow-down me-3"></i>
-                  <span>Export options</span>
-                </a>
-              </div>
-              <div>
-                <select class="form-select select-bg border-none" aria-label="Default select example">
-                  <option selected>Last Week</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-
-            </form>
-          </div>
-          <div class=" bg-white p-4 rounded-3">
-            <div class="row">
-              <div class="col-lg-12">
-               <div class="owl-carousel">
-                  
-               </div>
+       <TopFilter/>
+       <div class="user-wrapper bg-white p-2 my-3 ">
+         <div class="screenShoot-downloadBtn d-flex justify-content-end">
+           <router-link to="/downloadScreenshoot" >
+            <i class="fa-solid fa-download me-2"></i>
+            Download Screenshots
+            </router-link>
+         </div>
+         
+         <div class="row py-3">
+          <div class="col-lg-3">
+            <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body">
+                <div class="screenshot-main-img">
+                  <img src="assets/images/screenshootimageone.png" class="rounded-3" width="272px" height="380px"/>
+                 <div class="popup-image">
+                </div>
+                 
+                </div>
               </div>
             </div>
+            
           </div>
-        
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body">
+                 <img src="assets/images/screenshootimage2.png" class="rounded-3" width="272px" height="380px"/>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          </div>
+         <div class="row py-3">
+           <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           </div>
+           
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          
+         </div>
+         <div class="row py-3">
+           <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           </div>
+           
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-lg-3">
+              <div class="card h-100">
+                <div class="capture-header px-3 py-2">
+                  <div class="d-flex justify-content-between">
+                    <p>Ashikur Rahim</p>
+                    <a href=""><i class="fa-solid fa-folder"></i></a>
+                  </div>
+                  <div class="d-flex justify-content-between py-2">
+                    <small>20 Jun 2023 </small>
+                    <small>10:20 PM</small>
+                  </div>
+                </div>
+               <div class="card-body screen-not-data">
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i><span class="ms-2">No Screenshots Yet</span></a>
+              </div>
+            </div>
+           
+          </div>
+          
+         </div>
+       </div>
 </template>
 
 <script>
-
+import TopFilter from '../components/includes/TopFilter.vue';
 export default {
-    name: 'TimetrackdashboardScreenShootTwo',
+  name: 'TimetrackdashboardUser',
+  components:{TopFilter},
 
-    data() {
-        return {
-            
-        };
-    },
+  data() {
+      return {
+          
+      };
+  },
 
-    mounted() {
-    
- 
-    },
+  mounted() {
+      
+  },
 
-    methods: {
-        
-    },
+  methods: {
+      
+  },
 };
 </script>
 

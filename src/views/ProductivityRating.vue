@@ -1,476 +1,122 @@
 <template>
-    
-              <h5>Productivity Ratings</h5>
-              <div class="product-rating-top d-flex justify-content-between align-items-center bg-white px-3 py-2">
-                <div class="rating-search">
-                  <form action="" method="" class="d-flex align-items-center">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <input type="search" class="form-control border-0" placeholder="search"/>
-                   </form>
-                </div>
-                <div class="compnay-rating">
-                  <form>
-                    <select class="form-select border-0" aria-label="Default select example">
-                      <option selected>Company Ratings</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                  </form>
-                 
-                </div>
-                <div class="all-rating">
-                  <form>
-                    <select class="form-select border-0" aria-label="Default select example">
-                      <option selected>All</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                  </form>
-                 </div>
+  <div class="top-filter-area bg-white rounded p-3 d-flex justify-content-between">
+          <div class="filter-left d-flex align-items-center flex-wrap gap-4">
+           <form action="" method="" class="d-flex gap-2">
+             <div class="mb-3">
+                <input type="search" class="form-control filter-by-week" id="exampleInputEmail1" placeholder="Search">
+             </div>
+              <div class="tema-select">
+                <select class="form-select " aria-label="Default select example">
+                <option selected>All Teams</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                </select>
               </div>
-              <div class="d-flex justify-content-between align-items-center bg-white px-4 py-3 my-4">
-                <div class="w-20 text-center"><p>Activity</p></div>
-                <div class="rating-width text-center"> <p>Productivity Rating</p></div>
-                <div class="w-20 text-center"><p>Scope</p></div>
-                <div class="w-20 text-center"> <p>Time Used (Past 7 Days)</p></div>
-                
-               
-               </div>
-               <div class="product-rating-details d-flex gap-5 justify-content-between">
-                 <div class="activity-details bg-white rounded-3 px-3 py-2 w-20">
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitynotepad.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Notepad
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitygoogle.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google account
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activityfacebook.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Facebook
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitynotepad.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Notepad
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitygoogle.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google account
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activityfacebook.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Facebook
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                      <img src="assets/images/activitychrome.png"/>
-                      <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                  </div>
-                  <!---retaing details start--->
-                  <div class="rating-details d-flex gap-3 bg-white rounded-3 px-3 py-2 rating-width">
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                    <div class="form-check my-3">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                       <label class="form-check-label ms-2" for="flexRadioDefault1">
-                        Google Chrome
-                      </label>
-                    </div>
-                  </div>
-                  <!----scope area start----->
-                  <div class="scope-area scope-width bg-white rounded-3 px-3 py-2 w-20 text-center">
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                    <p>Global</p>
-                  </div>
-                  <!-----time used start----->
-                  <div class="used-time-area time-width bg-white rounded-3 px-3 py-2 w-20 text-center">
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
-                    <p>1h 10m</p>
+             </form>
+           </div>
+             <div class="filter-form">
+              <form action="" method="" class="d-flex gap-2 align-items-center">
+                 <div class="calander-icon">
+                    <i class="fa-regular fa-calendar-days icon me-2"></i>  
+                   <input type="text" class="form-control filter-by-week" id="datepicker" placeholder="Filter  Date">
+                 </div> 
+                 <select class="form-select filter-by-week">
+                   <option selected>Last Week</option>
+                   <option value="1">Last Month</option>
+                   <option value="2">Last year</option>
+                </select>
+                <a href=""> <i class="fa-solid fa-arrows-rotate"></i></a>
+             </form>
+        </div>
+  </div>
+  
+ <div class="productivity-mainContent py-3 bg-white px-3 my-3">
+   <div class="productivity-header d-flex justify-content-between align-items-center py-2 px-3">
+    <div class="app-header-left">
+      <i class="fa-regular fa-user me-2"></i>
+      <span>Ashikur Rahim</span>
+    </div>
+   </div>
+   <div class="productivity-details-wrapper bg-white p-2">
+    <div class="productivity-details-area d-flex justify-content-between">
+       <div class="attendance-details-left py-4 px-3">
+         <p class="py-2 fw-bold">Mail:<span>ashik00@gmail.com</span></p>
+         <p class="py-2 fw-bold">Team::<span>Default team</span></p>
+         <p class="py-2 fw-bold">Last synced::<span>Jun 20, 10:20PM</span></p>
+        </div>
+        <div class="productivity-details-right py-5 w-50">
+          <table class="table table-bordered">
+                  <thead>
+                     <tr>
+                        <th scope="col">App/Website</th>
+                        <th scope="col">Productivity</th>
+                        <th scope="col">Duration</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <img src="assets/images/activitychrome.png"/>
+                           <span class="ms-2">Google Chrome</span>
+                        </td>
+                       <td>
+                           <a href="#" class="productivity-status productivity-btn">Productive</a>
+                        </td>
+                       <td>2h 10m</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <img src="assets/images/activitychrome.png"/>
+                           <span class="ms-2">Google Chrome</span>
+                        </td>
+                       <td>
+                           <a href="#" class="productivity-status unproductivity-btn">Unproductive</a>
+                        </td>
+                       <td>2h 10m</td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <img src="assets/images/activityfacebook.png"/>
+                           <span class="ms-2">Facebook.com</span>
+                        </td>
+                       <td>
+                           <a href="#" class="productivity-status neutral-btn">Neutral</a>
+                        </td>
+                        <td>2h 10m</td>
+                     </tr>
                     
-                  </div>
-               </div>
-            
-</template>
+                     
+                     
+                     
+                  </tbody>
+                  </table>
+        </div>
+        </div>
+      </div>
+   </div>
+ </template>
 
 <script>
 export default {
-    name: 'TimetrackdashboardProductivityRating',
+  name: 'TimetrackdashboardUser',
 
-    data() {
-        return {
-            
-        };
-    },
+  data() {
+      return {
+          
+      };
+  },
 
-    mounted() {
-        
-    },
+  mounted() {
+      
+  },
 
-    methods: {
-        
-    },
+  methods: {
+      
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 
 </style>

@@ -57,11 +57,12 @@ body{
     font-weight: 400;
     font-family: var(--body-font);
     overflow-x: hidden;
-    background: hsl(200deg 27% 98%);
+    background: #F4F3FB;
 }
 img{
     vertical-align: middle;
     height: auto;
+    max-width: 100%;
 }
 a{
     text-decoration: none;
@@ -147,3 +148,7 @@ ovh{
     background-color: #00A6AB; 
     color:#fff;
 }
+
+.table-padding  td, tfoot, th, thead, tr {
+ padding: 20px;
+} 

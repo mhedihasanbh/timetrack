@@ -1,3 +1,144 @@
+//jquery
+$(document).ready(function(){
+  //lightbox image]
+  $('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+			}
+		}
+	});
+  
+  //show details 
+$("#filter-icon").click(function(){
+$(".filter-area").toggle();
+});
+
+//user date picker
+$( "#datepicker" ).datepicker({
+  showButtonPanel: true
+});
+//drag and drop box-one
+$( function() {
+$( "#boxTwo" ).draggable();
+} );
+//project two page extra js
+
+$("#status-btn").click(function(){
+$(".project-status").toggle();
+});
+$("#checkInput").click(function(){
+$(".task-check-img").toggle();
+});
+
+//drag and drop box-one
+$( function() {
+$( "#boxOne" ).draggable();
+} );
+
+//drag and drop box-one
+$( function() {
+$( "#boxThree" ).draggable();
+} );
+
+//sidebar toggle
+$("#dropDown").click(function(){
+  $('.side-dropdown').removeClass("side-dropdown");
+});
+//project 3 dots details
+$("#threeDots").click(function(){
+$(".threeDots-area").toggle();
+});
+
+//header notification
+$("#notification-details").click(function(){
+$(".notification-area").toggle();
+});
+
+
+
+//project-show
+$("#project-show").click(function(){
+$(".taskshow-area").toggle();
+});
+//tskimport
+$("#export").click(function(){
+$(".export-area").toggle();
+});
+
+$("#toggleSidebar").click(function(){
+$(".left-menu").toggleClass("hide");
+$(".content-wrapper").toggleClass("hide");
+})
+
+
+});
+
+
+
+let imageBox=document.querySelectorAll('.image-box');
+    let contentBox=document.querySelectorAll('.contentbx');
+    for(let i=0; i<imageBox.length; i++){
+
+      imageBox[i].addEventListener('mouseover',function(){
+
+         for(let i=0; i<contentBox.length; i++){
+          contentBox[i].className='contentbx';
+         }
+         document.getElementById(this.dataset.id).className='contentbx active';
+         for(let i=0; i<imageBox.length; i++){
+          imageBox[i].className='image-box'
+         }
+         this.className='image-box active'
+      })
+    }
+
+//lightbox image
+$('.without-caption').magnificPopup({
+  type: 'image',
+  closeOnContentClick: true,
+  closeBtnInside: false,
+  mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+  image: {
+    verticalFit: true
+  },
+  zoom: {
+    enabled: true,
+    duration: 300 // don't foget to change the duration also in CSS
+  }
+});
+
+$('.with-caption').magnificPopup({
+  type: 'image',
+  closeOnContentClick: true,
+  closeBtnInside: false,
+  mainClass: 'mfp-with-zoom mfp-img-mobile',
+  image: {
+    verticalFit: true,
+    titleSrc: function(item) {
+      return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+    }
+  },
+  zoom: {
+    enabled: true
+  }
+});
+
+
+
+
+
+
 window.onload=function(){
   const sortableList = document.querySelector(".sortable-list");
 const items = sortableList.querySelectorAll(".item");
@@ -47,67 +188,7 @@ function drop(ev) {
 }
 sortableList.addEventListener("dragenter", e => e.preventDefault());
 
-//jquery
-$(document).ready(function(){
-  //drag and drop box-one
- $( function() {
-  $( "#boxTwo" ).draggable();
-} );
- //project two page extra js
 
- $("#status-btn").click(function(){
-  $(".project-status").toggle();
-});
- $("#checkInput").click(function(){
-  $(".task-check-img").toggle();
-});
- 
-  //drag and drop box-one
- $( function() {
-  $( "#boxOne" ).draggable();
-} );
- 
- //drag and drop box-one
- $( function() {
-  $( "#boxThree" ).draggable();
-} );
-  //show details 
-$("#filter-icon").click(function(){
-  $(".filter-area").toggle();
-});
- 
-//sidebar toggle
-  $("#dropDown").click(function(){
-    $('.side-dropdown').removeClass("side-dropdown");
-  });
-  //project 3 dots details
-$("#threeDots").click(function(){
-  $(".threeDots-area").toggle();
-});
-
-  //header notification
-$("#notification-details").click(function(){
-  $(".notification-area").toggle();
-});
-
-
-
-//project-show
-$("#project-show").click(function(){
-  $(".taskshow-area").toggle();
-});
-//tskimport
-$("#export").click(function(){
-  $(".export-area").toggle();
- });
-
- $("#toggleSidebar").click(function(){
-  $(".left-menu").toggleClass("hide");
-  $(".content-wrapper").toggleClass("hide");
-})
-
-
-});
 //=============JAVASCRIPT===============
 //ck editor
 ClassicEditor

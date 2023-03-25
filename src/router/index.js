@@ -16,6 +16,7 @@ import TimeSheetone from '../views/TimeSheetone.vue'
 import TimeSheetTwo from '../views/TimeSheetTwo.vue'
 import ScreenShootone from '../views/ScreenShootone.vue'
 import ScreenShootTwo from '../views/ScreenShootTwo.vue'
+import DownloadScreenshoot from '../views/DownloadScreenshoot.vue'
 import EditTime from '../views/EditTime.vue'
 //setting dropdown page start
 import Billing from '../views/Billing.vue'
@@ -120,6 +121,12 @@ const routes = [
       name: 'ScreenShootTwo',
       component:ScreenShootTwo
     },
+    {
+      path: '/downloadScreenshoot',
+      name: 'DownloadScreenshoot',
+      component:DownloadScreenshoot
+    },
+    
     {
       path: '/edittime',
       name: ' EditTime',

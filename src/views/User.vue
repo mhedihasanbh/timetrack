@@ -1,156 +1,165 @@
 <template>
-    
-         <h5>Users</h5>
-         <div class="user-top d-flex justify-content-between align-items-center bg-white px-3 py-2">
-            <div class="rating-search">
-               <form action="" method="" class="d-flex align-items-center">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  <input type="search" class="form-control border-0" placeholder="Search by Name,email, ID"/>
-               </form>
-            </div>
-            <div class="all-user">
-               <form>
-                  <select class="form-select border-0" aria-label="Default select example">
-                     <option selected>All Users Selected</option>
-                     <option value="1">One</option>
-                     <option value="2">Two</option>
-                     <option value="3">Three</option>
-                  </select>
-               </form>
-            </div>
-            <div class="all-access">
-               <form>
-                  <select class="form-select border-0" aria-label="Default select example">
-                     <option selected>All Access Levels Selected</option>
-                     <option value="1">One</option>
-                     <option value="2">Two</option>
-                     <option value="3">Three</option>
-                  </select>
-               </form>
-            </div>
-            <div class="active-user">
-               <form>
-                  <select class="form-select border-0" aria-label="Default select example">
-                     <option selected>ACTIVE USERS</option>
-                     <option value="1">One</option>
-                     <option value="2">Two</option>
-                     <option value="3">Three</option>
-                  </select>
-               </form>
+         <TopFilter/>
+         <div class="user-wrapper bg-white p-2 my-3 ">
+   <div class="user-info-filter d-flex justify-content-between px-3">
+      <div class="user-info-title">
+         <h4>Users</h4>
+      </div>
+      <div class="user-info-right w-25">
+         <form action="" method="" class="d-flex gap-2 align-items-center">
+            <select class="form-select">
+               <option selected>Name</option>
+               <option value="1">Team</option>
+               <option value="2">Id</option>
+               <option value="2">Tracking Status</option>
+            </select>
+            <select class="form-select">
+               <option value="1">Ascending</option>
+               <option value="2">Descending</option>
+            </select>
+         </form>
+      </div>
+   </div>
+   <!-----USER INFO BOX1 START----->
+   <div class="user-main-content my-3 rounded-3 px-4 py-4">
+      <div class="user-name-area d-flex justify-content-between">
+         <div class="user-name d-flex gap-2 align-items-center">
+            <i class="fa-solid fa-user-large"></i>
+            <h5>Ashikur Rahim Ashik</h5>
+         </div>
+         <div class="user-track-time">
+            <a href="#"><i class="fa-solid fa-circle me-2"></i>Tracking Start</a>
+         </div>
+      </div>
+      <div class="user-info-area d-flex justify-content-between ">
+         <div class="user-all-info">
+            <p class="py-2">Id:<span>0000000fff0000000</span></p>
+            <p class="py-2">Team::<span>Default team</span></p>
+            <p>Last synced::<span>Jun 20, 10:20PM</span></p>
+         </div>
+         <div class="user-all-info">
+            <p class="py-2">Work Time::<span>00:08:00 hr</span></p>
+            <p class="py-2">Break Time:::<span>00:00:20 hr</span></p>
+         </div>
+         <div class="user-all-info user-progress">
+            <h6 class="py-2">Time</h6>
+            <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+               <div class="progress-bar progress-bar-striped " style="width: 75%;background-color:#913175"></div>
             </div>
          </div>
-         <div class="add-user-btn my-3">
-            <!-- <a href="">
-            <i class="fa-solid fa-users"></i>
-            <span class="ps-2">ADD USERS</span>
-            </a> -->
-            <div class="add-user">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn  py-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                           <i class="fa-solid fa-plus"></i>
-                           <h6 class="add-bill-card">ADD CARD</h6>
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                           <div class="modal-dialog ">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">User Info</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                 </div>
-                                 <form action="" method="">
-                                    <div class="modal-body">
-                                       <div class="mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label text-start">User Name</label>
-                                          <input type="text" name="" class="form-control" id="exampleFormControlInput1" >
-                                       </div>
-                                       <div class="mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label text-start">User Email</label>
-                                          <input type="email" name="" class="form-control" id="exampleFormControlInput1">
-                                       </div>
-                                       <div class="mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label text-start">User Phone</label>
-                                          <input type="number" name="" class="form-control" id="exampleFormControlInput1">
-                                       </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                       <button type="button" class="btn primary-button">Add User</button>
-                                    </div>
-                                 </form>
-                              </div>
-                           </div>
-                        </div>
-             </div>
+      </div>
+      <div class="full-screen-arrow">
+         <router-link to="/screenshotone" > <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center"></i></router-link>
+      </div>
+   </div>
+   <!-----USER INFO BOX1 END----->
+   <!-----USER INFO BOX2 START----->
+   <div class="user-main-content my-3 rounded-3 px-4 py-4">
+      <div class="user-name-area d-flex justify-content-between">
+         <div class="user-name d-flex gap-2 align-items-center">
+            <i class="fa-solid fa-user-large"></i>
+            <h5>Ashikur Rahim Ashik</h5>
          </div>
-         <div class="user-info-title d-flex justify-content-between bg-white px-4 py-3">
-            <div class="form-check w-20">
-               <input class="form-check-input" type="checkbox" id="gridCheck">
-               <label class="form-check-label" for="gridCheck">
-               Name
-               </label>
-            </div>
-            <p class="w-20 text-center ms-5">Screencasts</p>
-            <p class="w-10 text-center">Blur Screenshots</p>
-            <p class="w-20 text-center">Can Edit Time</p>
-            <p class="w-10 text-center">Delete Screencasts</p>
-            <p class="w-20 text-center">Blur Screenshots</p>
-            <p class="w-10 text-center">Time out after</p>
+         <div class="user-track-end">
+            <a href="#"><i class="fa-solid fa-circle me-2"></i>Tracking Stopped </a>
          </div>
-         <div class="user-info d-flex justify-content-between bg-white px-4 py-3 my-3">
-            <div class="form-check w-20 d-flex align-items-center gap-3">
-               <input class="form-check-input" type="checkbox" id="gridCheck">
-               <div class="d-flex align-items-center gap-2">
-                  <img src="assets/images/user.jpg" width="30px" height="30px"/>
-                  <div>
-                     <p>Ashikur Rahim</p>
-                     <p>Last Tracked: 1 day ago</p>
-                  </div>
-               </div>
-            </div>
-            <form action="" method="">
-               <select class="form-control ">
-                  <option>Off</option>
-                  <option>item 2</option>
-                  <option>item 3</option>
-                  <option>item 4</option>
-                  <option>item 5</option>
-               </select>
-            </form>
-            <div class="form-check form-switch">
-               <input class="form-check-input w-10" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            </div>
-            <form action="" method="">
-               <select class="form-control">
-                  <option>Yes</option>
-                  <option>item 2</option>
-                  <option>item 3</option>
-                  <option>item 4</option>
-                  <option>item 5</option>
-               </select>
-            </form>
-            <div class="form-check form-switch">
-               <input class="form-check-input w-10" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            </div>
-            <div class="">
-               <form action="" method="" class="ms-5">
-                  <select class="form-control">
-                     <option>Yes</option>
-                     <option>item 2</option>
-                     <option>item 3</option>
-                     <option>item 4</option>
-                     <option>item 5</option>
-                  </select>
-               </form>
-            </div>
-            <p class="w-10 text-center">10 min</p>
+      </div>
+      <div class="user-info-area d-flex justify-content-between ">
+         <div class="user-all-info">
+            <p class="py-2">Id:<span>0000000fff0000000</span></p>
+            <p class="py-2">Team::<span>Default team</span></p>
+            <p>Last synced::<span>Jun 20, 10:20PM</span></p>
          </div>
-     
+         <div class="user-all-info">
+            <p class="py-2">Work Time::<span>00:08:00 hr</span></p>
+            <p class="py-2">Break Time:::<span>00:00:20 hr</span></p>
+         </div>
+         <div class="user-all-info user-progress">
+            <h6 class="py-2">Time</h6>
+            <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+               <div class="progress-bar progress-bar-striped " style="width: 75%;background-color:#913175"></div>
+            </div>
+         </div>
+      </div>
+      <div class="full-screen-arrow">
+         <router-link to="/screenshotone" > <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center"></i></router-link>
+      </div>
+   </div>
+   <!-----USER INFO BOX2 END----->
+   <!-----USER INFO BOX3 START----->
+   <div class="user-main-content my-3 rounded-3 px-4 py-4">
+      <div class="user-name-area d-flex justify-content-between">
+         <div class="user-name d-flex gap-2 align-items-center">
+            <i class="fa-solid fa-user-large"></i>
+            <h5>Ashikur Rahim Ashik</h5>
+         </div>
+         <div class="user-track-end">
+            <a href="#"><i class="fa-solid fa-circle me-2"></i>Tracking Stopped </a>
+         </div>
+      </div>
+      <div class="user-info-area d-flex justify-content-between ">
+         <div class="user-all-info">
+            <p class="py-2">Id:<span>0000000fff0000000</span></p>
+            <p class="py-2">Team::<span>Default team</span></p>
+            <p>Last synced::<span>Jun 20, 10:20PM</span></p>
+         </div>
+         <div class="user-all-info">
+            <p class="py-2">Work Time::<span>00:08:00 hr</span></p>
+            <p class="py-2">Break Time:::<span>00:00:20 hr</span></p>
+         </div>
+         <div class="user-all-info user-progress">
+            <h6 class="py-2">Time</h6>
+            <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+               <div class="progress-bar progress-bar-striped " style="width: 75%;background-color:#913175"></div>
+            </div>
+         </div>
+      </div>
+      <div class="full-screen-arrow">
+         <router-link to="/screenshotone" > <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center"></i></router-link>
+      </div>
+   </div>
+   <!-----USER INFO BOX3 END----->
+   <!-----USER INFO BOX4 START----->
+   <div class="user-main-content my-3 rounded-3 px-4 py-4">
+      <div class="user-name-area d-flex justify-content-between">
+         <div class="user-name d-flex gap-2 align-items-center">
+            <i class="fa-solid fa-user-large"></i>
+            <h5>Ashikur Rahim Ashik</h5>
+         </div>
+         <div class="user-track-end">
+            <a href="#"><i class="fa-solid fa-circle me-2"></i>Tracking Stopped </a>
+         </div>
+      </div>
+      <div class="user-info-area d-flex justify-content-between ">
+         <div class="user-all-info">
+            <p class="py-2">Id:<span>0000000fff0000000</span></p>
+            <p class="py-2">Team::<span>Default team</span></p>
+            <p>Last synced::<span>Jun 20, 10:20PM</span></p>
+         </div>
+         <div class="user-all-info">
+            <p class="py-2">Work Time::<span>00:08:00 hr</span></p>
+            <p class="py-2">Break Time:::<span>00:00:20 hr</span></p>
+         </div>
+         <div class="user-all-info user-progress">
+            <h6 class="py-2">Time</h6>
+            <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+               <div class="progress-bar progress-bar-striped " style="width: 75%;background-color:#913175"></div>
+            </div>
+         </div>
+      </div>
+      <div class="full-screen-arrow">
+         <router-link to="/screenshotone" > <i class="fa-sharp fa-solid fa-up-right-and-down-left-from-center"></i></router-link>
+      </div>
+   </div>
+   <!-----USER INFO BOX4 END----->
+</div>
 </template>
 
 <script>
+import TopFilter from '../components/includes/TopFilter.vue';
 export default {
     name: 'TimetrackdashboardUser',
+    components: {TopFilter},
 
     data() {
         return {
