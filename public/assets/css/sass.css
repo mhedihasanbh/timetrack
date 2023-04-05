@@ -139,11 +139,11 @@ ovh{
 .w-10{
     width: 10%;
 }
-.primary-button{
+/* .primary-button{
     background-color: #00A6AB;
     color:#fff;
     padding-left: 12px 25px;
-}
+} */
 .primary-button:hover{
     background-color: #00A6AB; 
     color:#fff;
@@ -152,3 +152,17 @@ ovh{
 .table-padding  td, tfoot, th, thead, tr {
  padding: 20px;
 } 
+.primary-btn{
+    background-color: #42375B;
+    color:#fff;
+}
+.primary-bg{
+    background-color: #F7FAFF;
+}
+.border-bottom{
+    border-bottom: 1px solid #E1E1E1;
+}
+.project-title{
+    color:#181818;
+    font-weight: 600;
+}

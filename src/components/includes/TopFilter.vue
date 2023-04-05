@@ -20,9 +20,10 @@
                <div class="filter-form">
                 <form action="" method="" class="d-flex gap-2 align-items-center">
                    <div class="calander-icon">
-                      <i class="fa-regular fa-calendar-days icon me-2"></i>  
-                     <input type="text" class="form-control filter-by-week" id="datepicker" placeholder="Filter  Date">
-                   </div> 
+                      
+                       <input type="date" class="form-control filter-by-week" >
+                       
+                     </div> 
                    <select class="form-select filter-by-week">
                      <option selected>Last Week</option>
                      <option value="1">Last Month</option>

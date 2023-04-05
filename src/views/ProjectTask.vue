@@ -221,7 +221,8 @@ export default {
     },
 
     mounted() {
-        
+ 
+
     },
 
     methods: {

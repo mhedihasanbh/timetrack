@@ -1,13 +1,15 @@
 <template>
     <header class="header fixed-top d-flex justify-content-between align-items-center py-2">
-      <div class="software-title d-flex gap-5 align-items-center">
+      <div class="header-title d-flex gap-sm-2 gap-5 align-items-center">
         <h4>Time Trakcer</h4>
-        <span class="ms-4"><i class="fa-solid fa-bars"></i></span>
-        <h4>Dashboard</h4>
+       <a href="#" class="sidebarCollapse ms-4" id="toggleSidebar" data-placement="bottom">
+                <span class="fa-solid fa-bars"></span>
+              </a>
+        <h4 class="dashboard-heading">Dashboard</h4>
       </div>
       <div class="header-search w-25">
         <form action="" method="">
-            <div class="form-group">
+            <div class="">
               <i class="fa-solid fa-magnifying-glass search-icon"></i>
               <input type="search" placeholder="search...."/>
            
@@ -16,9 +18,9 @@
       </div>
       <div class="herader-right d-flex align-items-center gap-4">
           <div class="header-right-icon chat-box">
-            <a href="#">
+            <router-link to="/messanger">
               <i class="fa-regular fa-message"></i>
-            </a>
+            </router-link>
             <span>1</span>
            </div>
           <div class="header-right-icon notification-box">
@@ -30,8 +32,9 @@
                   <h5>Notifications</h5>
                   <div>
                     <a href="">
-                      <i class="fa-solid fa-xmark"></i
-                        ></a>
+                      <i class="fa-solid fa-xmark text-dark"></i
+                        >
+                        </a>
                   </div>
                 </div>
                 <ul class="nav nav-tabs d-flex justify-content-between" id="myTab" role="tablist">
@@ -112,10 +115,11 @@
             sajib bhuyan
             <i class="fa-solid fa-angle-down"></i>
           </a>
-          <ul class="dropdown-menu mt-3">
-            <li><a class="dropdown-item" href="#">Profile Setting</a></li>
-            <li><a class="dropdown-item" href="#">Activity Log</a></li>
-            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+          <ul class="dropdown-menu profile-dropdown mt-3">
+            <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user me-2"></i>My Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa-regular fa-pen-to-square me-2"></i>Edit Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-lock-open me-2"></i>Activity Log</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign Out</a></li>
           </ul>
         </div>
         <div class="user-image">

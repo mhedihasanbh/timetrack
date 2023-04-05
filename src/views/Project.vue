@@ -1,8 +1,285 @@
 <template>
-   <div class="my-1">
-      <TopFilter/>
+   <TopFilter/>
+   <div class="user-report-area my-3 bg-white rounded p-3 h-100">
+      <div class="top-filter-area bg-white rounded p-3 d-flex justify-content-between">
+           <div class="report-left d-flex align-items-center flex-wrap gap-4 w-75">
+            <form action="" method="" class="d-flex align-items-center gap-2 w-75">
+               <select class="form-select filter-by-week" id="find-client" >
+                    <option selected>Active</option>
+                    <option selected>
+                     client one
+                    </option>
+                   </select>
+                 <select class="form-select filter-by-week"   @change="onChange"  >
+                    <option value="0" selected>Client</option>
+                    <option value="client">Search Client</option>
+                  </select>
+                   
+                 <select class="form-select filter-by-week" @change="onChange">
+                    <option selected>Access</option>
+                    <option value="access">search Access</option>
+                </select>
+                 <select class="form-select filter-by-week" @change="onChange">
+                    <option  selected>Billing</option>
+                    <option value="billing">search Billing</option>
+                </select>
+               
+                 <div class="filter-btn w-100">
+                    <button type="submit" class="primary-btn p-2">Apply Filter</button> 
+                   
+                 </div>
+              </form>
+            </div>
+            
+          <div class="report-right d-flex gap-3">
+            <div class="screenShoot-downloadBtn">
+             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+               <i class="fa-regular fa-plus me-2"></i>Create New Project
+             </a>
+           </div>
+           <!-- Modal -->
+           <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog  modal-dialog-centered modal-xl">
+                  <div class="modal-content ms-5">
+                     <div class="modal-header report-header">
+                     <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="fa-regular fa-file"></i>
+                        Project Report
+                        </h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        <form action="" method="" class="project-report" >
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <div>
+                            <input type="text" class="form-control filter-by-week" name="" placeholder=" Project Name"/>
+                          </div>
+                            </div>
+                            <div class="col-lg-3">
+                           <select class="form-select filter-by-week">
+                            <option selected>Select Client</option>
+                            </select>
+                            <div class="client-add project-bg mt-2 px-3 py-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              <a href="#" class="fw-bold" >
+                                 <i class="fa-solid fa-plus me-2"></i>Add/Find Client
+                                 </a>
+                            </div>
+                            <div class="dropdown-menu addClient-dropdown">
+                            <input type="text" class="form-control" placeholder="client name"/>
+                           </div>
+                           
+                            <div class="no-client project-bg px-3 py-2">
+                             <p class="fw-bold"><i class="fa-solid fa-triangle-exclamation"></i> No Clients Yet</p>
+                             <span>Start typing to create one</span>
+                            </div>
+                            </div>
+                            <div class="col-lg-2">
+                              <select class="form-select filter-by-week">
+                            <option selected>No Template</option>
+                            </select>
+                            <div class="project-bg px-3 py-2 mt-2">
+                              <p><span class="fw-bold">Update</span> to use templates</p>
+                            </div>
+                            </div>
+                            <div class="col-lg-2">
+                              <input type="color" class="form-control" id="colorpicker" value="#0000ff">
+                           
+                            </div>
+                            <div class="col-lg-2">
+                              <div class="project-public pt-2">
+                                 <a href="#">
+                                 <i class="fa-solid fa-check me-2"></i>Public
+                              </a>
+                              </div>
+                             
+                            </div>
+                            </div>
+                            <div class="project-createBtns d-flex justify-content-end gap-2">
+                              <div class="project-cancel project-bg">
+                                 <a href="#" class="py-2 px-5">Cancel</a>
+                              </div>
+                              <div class="create-btn primary-btn">
+                                 <a href="#" class="text-white py-2 px-5">Create</a>
+                              </div>
+                              
+                            </div>
+                         </form>
+
+                      </div>
+                     <div class="modal-footer">
+                     <button type="button" class="btn report-close" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+      </div>
+      <!-----project dropdown extra code----->
+      <div class="project-dropdown-area w-25 mb-4" v-if="projectHistory==='client'" >
+         <form action="" method="">
+            <div class="project-dropdown-header p-3">
+               <i class="fa-solid fa-magnifying-glass me-2"></i>
+               <input type="search" class="border-none" placeholder="Find Client..."/>
+            </div>
+            <div class="d-flex justify-content-between align-items-center p-4">
+               <p>Show</p>
+            <select class="form-select w-50  border-none">
+            <option selected>Active</option>
+            <option >Inactive</option>
+            </select>
+            </div>
+         </form>
+       <hr/>
+      <div class="project-dropdown-footer py-3 d-flex gap-2 align-items-center justify-content-center">
+         <i class="fa-solid fa-ban"></i>
+         <p class="fw-bold">No Clients Yet</p>
+      </div> 
+     </div>
+     <div class="project-dropdown-area w-25 mb-4 "  v-if="projectHistory==='access'">
+         <form action="" method="">
+            <div class="project-dropdown-header p-3">
+               <i class="fa-solid fa-magnifying-glass me-2"></i>
+               <input type="search" class="border-none" placeholder="Find Users or Groups..."/>
+            </div>
+            <div class="d-flex justify-content-between align-items-center p-4">
+               <p>Show</p>
+            <select class="form-select w-50  border-none">
+            <option selected>Active</option>
+            <option >Inactive</option>
+            </select>
+            </div>
+       
+       <hr/>
+      <div class="project-dropdown-body project-access-dropdown px-3">
+         <div class="form-check border-bottom py-2">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+               Select All
+            </label>
+         </div>
+         
+         <div class="form-check py-2 ">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+         <label class="form-check-label" for="flexCheckChecked">
+            User name
+         </label>
+         </div>
+      </div> 
+   </form>
+     </div>
+     <div class="project-dropdown-area w-25 mb-4" v-if="projectHistory==='billing'">
+         <form action="" method="">
+            <div class="project-dropdown-header p-3">
+               <i class="fa-solid fa-magnifying-glass me-2"></i>
+               <input type="search" class="border-none" placeholder="Find by name"/>
+            </div>
+            <div class="d-flex justify-content-between align-items-center p-4">
+               <p>Show</p>
+            <select class="form-select w-50  border-none">
+            <option selected>Active</option>
+            <option >Inactive</option>
+            </select>
+            </div>
+       
+       <hr/>
+      <div class="project-dropdown-body project-access-dropdown px-3">
+         <div class="form-check border-bottom py-2">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+               Billable
+            </label>
+         </div>
+         
+         <div class="form-check py-2 ">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+         <label class="form-check-label" for="flexCheckChecked">
+            Non Billable
+         </label>
+         </div>
+      </div> 
+   </form>
+     </div>
+    <!-----project dropdown extra code----->
+      <div class="project-table table-bg">
+         <table class="table table-padding table-sm">
+            <thead>
+               <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Client</th>
+                  <th scope="col">Tracked</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Progress</th>
+                  <th scope="col">Access</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="projectCheck" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">1</label>
+                     </div>
+                     <span>sajib bhuyan</span>
+                  </td>
+                  <td>john doe</td>
+                  <td>00</td>
+                  <td>10.00 USD</td>
+                  <td>01</td>
+                  <td>Public</td>
+               </tr>
+            
+              
+              
+            </tbody>
+        </table>
+      </div>
+      <div class="user-btn d-flex justify-content-end pb-5">
+         <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal3"><i class="fa-regular fa-circle-user me-2"></i>See by Users</a>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog  modal-dialog-centered modal-xl">
+                  <div class="modal-content ms-5">
+                     <div class="modal-header report-header">
+                     <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="fa-regular fa-circle-user me-2"></i>
+                        See by Users
+                        </h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        
+                        <div class="user-info-table table-bg">
+                           <table class="table table-bordered">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">User</th>
+                                    <th scope="col">Work Time</th>
+                                    <th scope="col">Invoiced</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td >User Name</td>
+                                    <td>00:20:20</td>
+                                    <td>02</td>
+                                 </tr>
+                                 
+                            </tbody>
+                        </table>
+                       </div>
+                      
+                      </div>
+                     <div class="modal-footer">
+                     <button type="button" class="btn report-close" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+               </div>
+            </div>
+      </div>
+     
    </div>
-  <div class="project-task-area bg-white p-5">
+   <div class="project-task-area bg-white p-5">
      <h6>User Name</h6>
      <div class="project-taskArea">
       <nav>
@@ -376,13 +653,14 @@
       </div>
      </div>
    </div>
+   
        
  </template>
  
  <script>
  import TopFilter from '../components/includes/TopFilter.vue';
  export default {
-   name: 'projectOne',
+   name: 'projectTwo',
    components:{TopFilter},
  
    data() {
@@ -392,18 +670,23 @@
    },
  
    mounted() {
-       
+   //select page
+   const selectInput=document.getElementById('projectCheck');
+   const projectArea=document.querySelector('.project-task-area');
+   selectInput.addEventListener("click",function(){
+   projectArea.classList.toggle('project-area');
+});
    },
  
    methods: {
-      searchClient(event){
-         console.log(event.target.value);
-        this.projectHistory=event.target.value;
-      }
+      onChange(event){
+        this.projectHistory=event.target.value
+    }
+    
    },
  };
  </script>
  
- <style  scoped>
+ <style lang="scss" scoped>
  
  </style>

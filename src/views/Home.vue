@@ -3,18 +3,106 @@
 <div class="top-filter-area bg-white rounded p-3 d-flex justify-content-between">
    <div class="filter-left d-flex align-items-center flex-wrap gap-4">
       <h5>Overview</h5>
-      <a  class="filter dropdown-toggle" id="filter-icon"  data-bs-toggle="dropdown" aria-expanded="false">
+      <a  class="filter dropdown-toggle" data-bs-toggle="modal" data-bs-target="#dashboardFilter">
       <img src="assets/images/filter.png"/>
-      <span>Filter</span>
+      <span >Filter</span>
       </a>
    </div>
+   <!-----DROP DOWN FILTER START----->
+ 
+      <!-- Button trigger modal -->
+      <!-- Modal -->
+      <div class="modal fade" id="dashboardFilter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+         <div class="modal-content">
+            <div class="modal-header remove-timeHeader">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Time Track Filter</h1>
+             <i class="fas fa-times fa-lg remove-closeBtn" data-bs-dismiss="modal" aria-label="Close"></i>
+            </div>
+            <div class="modal-body text-center">
+         <div class="top-filter-area bg-white rounded p-3 d-flex justify-content-between align-items-center">
+            <div class="filter-left d-flex align-items-center flex-wrap gap-4">
+             <form action="" method="" class="filter-form d-flex gap-2">
+               <div>
+                  <select class="form-select filter-by-week">
+                     <option selected>Last Week</option>
+                     <option value="1">Last Month</option>
+                     <option value="2">Last year</option>
+                  </select>
+                  </div>
+               <div class="mb-3">
+                  <input type="search" class="form-control filter-by-week" id="exampleInputEmail1" placeholder="search project">
+               </div>
+               <div class="mb-3">
+                  <input type="search" class="form-control filter-by-week" id="exampleInputEmail1" placeholder="search query">
+               </div>
+               <div class="user-filter form-check form-check-inline pt-2 ms-2">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">User</label>
+               </div>
+               <div class="user-filter form-check form-check-inline pt-2">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">title</label>
+               </div>
+               <div class="mb-3">
+                 <button type="submit" class="primary-btn p-2">Filter</button>
+               </div>
+               
+             </form>
+             <div class="dashboard-table">
+               <table class="table   table-bordered my-3">
+            <thead>
+               <tr>
+                  <th>Duration</th>
+                  <th>User</th>
+                  <th>Project</th>
+                  <th>Title</th>
+               </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <td>1.30.00</td>
+               <td>ashik</td>
+               <td>communication</td>
+               <td>user tracking</td>
+              </tr>
+              <tr>
+               <td>2.30.00</td>
+               <td>sajib</td>
+               <td>demo</td>
+               <td>user tracking</td>
+              </tr>
+              <tr>
+               <td>4.30.00</td>
+               <td>rakib</td>
+               <td>mega</td>
+               <td>user tracking</td>
+              </tr>
+              <tr>
+               <td>1.30.00</td>
+               <td>ashik</td>
+               <td>communication</td>
+               <td>user tracking</td>
+              </tr>
+            </tbody>
+            </table>
+             </div>
+            
+             </div>
+               
+              </div>
+               </div>
+            </div>
+      </div>
+      </div>
+<!-----DROP DOWN FILTER END----->
+
    <div class="filter-form">
       <form action="" method="" class="d-flex gap-2 align-items-center">
          <div class="calander-icon">
-            <i class="fa-regular fa-calendar-days icon me-2"></i>  
-            <input type="text" class="form-control filter-by-week" id="datepicker" placeholder="Filter  Date">
+           <input type="date" class="form-control filter-by-week"  placeholder="Filter Date">
          </div>
-         <select class="form-select filter-by-week">
+         <select class="form-select filter-by-week w-50">
             <option selected>Last Week</option>
             <option value="1">Last Month</option>
             <option value="2">Last year</option>
@@ -24,206 +112,7 @@
    </div>
 </div>
 <!-----TOP SECTION END----->
-<!-----DROP DOWN FILTER START----->
-<div class="row" id="filter-area">
-   <div class="col-lg-12">
-      <div class="filter-area">
-         <div class="filter-title d-flex justify-content-between align-items-center py-4 px-3">
-            <div class="px-3">
-               <h6>Filter</h6>
-               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            </div>
-            <div>
-               <form action="" method="">
-                  <div class="form-box d-flex gap-3 align-items-center">
-                     <input type="search" placeholder="Search something..."/>
-                     <i class="fa-solid fa-magnifying-glass top-search-icon"></i>
-                  </div>
-               </form>
-            </div>
-         </div>
-         <div class="filter-top-area ">
-            <div class="filter-tab">
-               <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Team Member</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">User Name</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Team Name</button>
-                  </li>
-               </ul>
-               <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active py-5" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                     <table class="table filter-table px-3 table-bordered">
-                        <thead>
-                           <tr>
-                              <th scope="col">User List</th>
-                              <th scope="col">User Summary</th>
-                              <th scope="col">Reports</th>
-                              <th scope="col">Productivity Apps</th>
-                              <th scope="col">UnProductivity Apps</th>
-                           </tr>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>
-                                 <div class="d-flex gap-3">
-                                    <img src="assets/images/searchFilter.png" width="26px" height="26px"/>
-                                    <span>Ali Hasan Joy</span>
-                                 </div>
-                              </td>
-                              <td>Ali Hasan Joy</td>
-                              <td>Ali Hasan Joy</td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 75%">75%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 35%">35%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>
-                                 <div class="d-flex gap-3">
-                                    <img src="assets/images/searchFilter.png" width="26px" height="26px"/>
-                                    <span>Ali Hasan Joy</span>
-                                 </div>
-                              </td>
-                              <td>Ali Hasan Joy</td>
-                              <td>Ali Hasan Joy</td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 75%">75%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 35%">35%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>
-                                 <div class="d-flex gap-3">
-                                    <img src="assets/images/searchFilter.png" width="26px" height="26px"/>
-                                    <span>Ali Hasan Joy</span>
-                                 </div>
-                              </td>
-                              <td>Ali Hasan Joy</td>
-                              <td>Ali Hasan Joy</td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 75%">75%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 35%">35%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>
-                                 <div class="d-flex gap-3">
-                                    <img src="assets/images/searchFilter.png" width="26px" height="26px"/>
-                                    <span>Ali Hasan Joy</span>
-                                 </div>
-                              </td>
-                              <td>Ali Hasan Joy</td>
-                              <td>Ali Hasan Joy</td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 75%">75%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 35%">35%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>
-                                 <div class="d-flex gap-3">
-                                    <img src="assets/images/searchFilter.png" width="26px" height="26px"/>
-                                    <span>Ali Hasan Joy</span>
-                                 </div>
-                              </td>
-                              <td>Ali Hasan Joy</td>
-                              <td>Ali Hasan Joy</td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 75%">75%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 35%">35%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>
-                                 <div class="d-flex gap-3">
-                                    <img src="assets/images/searchFilter.png" width="26px" height="26px"/>
-                                    <span>Ali Hasan Joy</span>
-                                 </div>
-                              </td>
-                              <td>Ali Hasan Joy</td>
-                              <td>Ali Hasan Joy</td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 75%">75%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                              <td>
-                                 <div class="gamelords py-2">
-                                    <div class="progress project-progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                       <div class="progress-bar" style="width: 35%">35%</div>
-                                    </div>
-                                 </div>
-                              </td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </div>
-                  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-                  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<!-----DROP DOWN FILTER END----->
+
 <!-----MINI CHART START----->
 <div class="row pt-3 pb-3">
    <div class="col-lg-3">
@@ -396,8 +285,8 @@
 </div>
 <!-----PRODUCTIVITY CHART START----->
 <!-----TABLE START----->
-<div class="row bg-white rounded-3 p-3">
-   <table class="table table-bordered">
+<div class="row bg-white rounded-3 p-3 ">
+   <table class="table table-bordered dashboard-table">
       <thead>
          <tr>
             <th scope="col">App/Website</th>
@@ -500,8 +389,7 @@ export default {
     },
 
     mounted() {
-        
-     //PRODUCTIVITY CHART
+        //PRODUCTIVITY CHART
      var options = {
           series: [{
           data: [
@@ -786,6 +674,8 @@ export default {
           id: 'area-datetime',
           type: 'area',
           height: 350,
+          background: '#fff',
+          color:'red',
           zoom: {
             autoScaleYaxis: true
           }
@@ -841,8 +731,11 @@ export default {
             opacityFrom: 0.7,
             opacityTo: 0.9,
             stops: [0, 100]
-          }
+          },
+          colors:['#382A57']
         },
+        
+      
         };
 
         var chart = new ApexCharts(document.querySelector("#productivity-chart"), options);
@@ -857,8 +750,8 @@ export default {
       
         activeEl.target.classList.add('active')
       }
-      
-      document
+      window.onload=function(){
+         document
         .querySelector('#one_month')
         .addEventListener('click', function(e) {
           resetCssClasses(e)
@@ -906,7 +799,10 @@ export default {
           new Date('23 Jan 2012').getTime(),
           new Date('27 Feb 2013').getTime()
         )
-      })
+      }) 
+    
+      }
+      
    },
   
     methods: {

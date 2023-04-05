@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/Home.vue'
 import ProjectOne from '../views/ProjectOne.vue'
-import ProjectTwo from '../views/ProjectTwo.vue'
+import Project from '../views/Project.vue'
 import ActivitySummary from '../views/ActivitySummary.vue'
 import Attendance from '../views/Attendance.vue'
 import HoursTrack from '../views/HoursTrack.vue'
@@ -12,8 +12,7 @@ import Customexport from '../views/Customexport.vue'
 import Newboard from '../views/Newboard.vue'
 import Meeting from '../views/Meeting.vue'
 import Task from '../views/Task.vue'
-import TimeSheetone from '../views/TimeSheetone.vue'
-import TimeSheetTwo from '../views/TimeSheetTwo.vue'
+import TimeSheet from '../views/Timesheet.vue'
 import ScreenShootone from '../views/ScreenShootone.vue'
 import ScreenShootTwo from '../views/ScreenShootTwo.vue'
 import DownloadScreenshoot from '../views/DownloadScreenshoot.vue'
@@ -27,8 +26,10 @@ import Group from '../views/Group.vue'
 import EmailNotification from '../views/EmailNotification.vue'
 import Integration from '../views/Integration.vue'
 import Compnay from '../views/Compnay.vue'
+import UserSeeting from '../views/UserSeeting.vue'
 import WorkSchedule from '../views/WorkSchedule.vue'
 //setting dropdown page end
+import Messanger from '../views/Messanger.vue'
 import Download from '../views/Download.vue'
 import Invite from '../views/Invite.vue'
 import profile from '../views/Profile.vue'
@@ -41,16 +42,17 @@ const routes = [
       component: HomeView
     },
     {
+      path: '/project',
+      name: 'Project',
+      component: Project
+    },
+    {
       path: '/projectOne',
       name: 'ProjectOne',
       component: ProjectOne
     },
     
-    {
-      path: '/projectTwo',
-      name: 'ProjectTwo',
-      component: ProjectTwo
-    },
+  
     {
       path: '/activitysummary',
       name: 'activitySummary',
@@ -102,15 +104,11 @@ const routes = [
       component:Task
     },
     {
-      path: '/timesheetone',
-      name: 'TimeSheetone',
-      component:TimeSheetone
+      path: '/TimeSheet',
+      name: 'TimeSheet',
+      component:TimeSheet
     },
-    {
-      path: '/timesheetTwo',
-      name: 'timesheetTwo',
-      component:TimeSheetTwo
-    },
+    
     {
       path: '/screenshotone',
       name: 'ScreenShootone',
@@ -168,6 +166,12 @@ const routes = [
     name: 'integration',
     component:Integration
   },
+  {
+    path: '/userseeting',
+    name: 'UserSeeting',
+    component:UserSeeting
+  },
+  
  
   {
     path: '/compnay',
@@ -181,11 +185,16 @@ const routes = [
   },
  
   //seeting page end
- 
+  
     {
       path: '/download',
       name: 'download',
       component:Download
+    },
+    {
+      path: '/messanger',
+      name: 'messanger',
+      component:Messanger
     },
     {
       path: '/invite',

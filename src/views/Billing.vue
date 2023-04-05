@@ -1,8 +1,9 @@
 <template>
-             <div class="billing-top d-flex justify-content-between">
-                <h5>Billing</h5>
+   <TopFilter/>
+             <div class="billing-top d-flex justify-content-between py-3">
+                <h5 class="billing-title">Billing</h5>
                 <div>
-                  <select class="form-select border-0 bg-white" aria-label="Default select example">
+                  <select class="primary-btn form-control border-0 " id="slectable5" >
                     <option selected>Billing Details</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -12,8 +13,8 @@
                </div>
                <div class="row py-3">
                  <div class="col-lg-8">
-                   <div class="billing-details-area bg-white rounded-3 p-3">
-                    <h5>Billing details</h5>
+                   <div class="billing-details-area bg-white rounded-3 p-3 h-100">
+                    <h5 class="billing-title">Billing details</h5>
                     <table class="table table-borderless">
                       <tbody>
                         <tr>
@@ -54,8 +55,8 @@
                             <div class="add-card">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn  py-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                           <i class="fa-solid fa-plus"></i>
-                           <h6 class="add-bill-card">ADD CARD</h6>
+                           
+                           <h6 class="primary-btn px-3 py-2"><i class="fa-solid fa-plus"></i>ADD CARD</h6>
                         </button>
                         <!-- Modal -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -74,12 +75,12 @@
                                        <div class="mb-3">
                                           <label for="exampleFormControlInput1" class="form-label text-start">Card Number</label>
                                           <input type="text" name="" class="form-control" id="exampleFormControlInput1">
-                                       
+                                       </div>
                                        <div class="mb-3">
                                           <label for="exampleFormControlInput1" class="form-label text-start">Card Details</label>
                                          <textarea class="form-control" rows="6"></textarea>
                                        </div>
-                                    </div>
+                                   
                                     </div>
                                     <div class="modal-footer">
                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -104,8 +105,8 @@
                    </div>
                  </div>
                  <div class="col-lg-4">
-                   <div class="current-plan-area bg-white rounded-3 p-3">
-                     <h5>Current plan includes</h5>
+                   <div class="current-plan-area bg-white rounded-3 p-3 h-100">
+                     <h5 class="billing-title">Current plan includes</h5>
                      <ul>
                       <li>All of Basic plan</li>
                       <li>Track apps and URLs</li>
@@ -123,7 +124,7 @@
                 <div class="col-lg-12">
                   <div class="upgrade-plan-area bg-white rounded-3 p-3 ">
                     <div class="mx-5">
-                      <h5>Upgrade your plan</h5>
+                      <h5 class="billing-title">Upgrade your plan</h5>
                      <p>When upgrading you will get all of the Standard plan features plus:</p>
                     </div>
                       <div class="service-plan-area d-flex justify-content-between m-5">
@@ -133,6 +134,9 @@
                           <li>VIP support</li>
                           <li>Concierge account setup</li>
                          </ul>
+                         <div class="">
+                           <a href="#" class="primary-btn py-2 px-4 rouded-3">Upgrade your plan</a>
+                         </div>
                        </div>
                        <div>
                         <ul>
@@ -149,8 +153,9 @@
                      </div>
                   </div>
                 </div>
+
                </div>
-               <h3 class="py-5">Billing FAQs</h3>
+               <h3 class="billing-title py-5">Billing FAQs</h3>
                <div class="row">
                  <div class="col-lg-12">
                   <div class="accordion" id="accordionExample">
@@ -221,8 +226,10 @@
 </template>
 
 <script>
+import TopFilter from '../components/includes/TopFilter.vue';
 export default {
     name: 'TimetrackdashboardBilling',
+    components:{TopFilter},
 
     data() {
         return {

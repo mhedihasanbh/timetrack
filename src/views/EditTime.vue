@@ -1,65 +1,162 @@
 <template>
-   
-              <div class="project-top-item bg-white p-4 rounded-3">
-                   <form action="" method="" class="d-flex space-between">
-                  
-                    <div class="edit-time-left d-flex align-items-center gap-3">
-                        <h5>Edit Time</h5>
-                      <select class="form-select select-bg border-none" aria-label="Default select example">
-                        <option selected>Ashikur Rahim</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                     <div class="edit-time-right">
-                      <select class="form-select select-bg border-none" aria-label="Default select example">
-                        <option selected>Last Week</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                  </form>
-                </div>
+       <div>
+        <TopFilter/>
+       </div>
+              
                 <div class="row">
                   <div class="col-lg-12">
                    <div id="edit-timeChart"></div>
                   </div>
                 </div>
-                <div class="time-edit-area d-flex justify-content-between align-items-center bg-white rounded-3 px-5 py-3 my-4">
+                <div class="time-edit-area  primary-bg d-flex justify-content-between align-items-center  rounded-3 px-5 py-3 my-4">
                    <p>12:00 AM</p>
                    <p>5:05 AM</p>
                    <p>5h 00m</p>
                    <p>Not Working</p>
                    <p>Not Working</p>
                    <div>
-                    <a href=""><i class="fa-regular fa-pen-to-square me-3"></i></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#edittimeModal">
+                  <i class="fa-regular fa-pen-to-square me-3"></i>
+                  </a>
+                   <!-- Modal -->
+             <div class="modal fade" id="edittimeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog  modal-dialog-centered modal-xl">
+                  <div class="modal-content ms-5">
+                     <div class="modal-header report-header">
+                     <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="fa-regular fa-circle-user me-2"></i>
+                        See by Users
+                        </h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        
+                       <form action="" method="">
+                         <div class="mb-3">
+                           <input type="datetime-local" class="form-control" />
+                         </div>
+                         <div class="mb-3">
+                           <textarea class="form-control" placeholder="add note"></textarea>
+                         </div>
+                       </form>
+                      
+                      </div>
+                     <div class="modal-footer">
+                      <button type="button" class="primary-bg px-3 py-2 border-none" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="primary-btn px-3 py-2">Update</button>
+                    </div>
+                  </div>
+               </div>
+            </div>
                     <a href=""><i class="fa-solid fa-trash-can"></i></a>
                    </div>
                    
                 </div>
-                <div class="time-edit-area d-flex justify-content-between align-items-center bg-white rounded-3 px-5 py-3 my-4">
+                <div class="time-edit-area d-flex justify-content-between align-items-center primary-bg rounded-3 px-5 py-3 my-4">
                   <p>12:00 AM</p>
                   <p>5:05 AM</p>
                   <p>5h 00m</p>
                   <p>General Work</p>
                   <p>Emails</p>
                   <div>
-                   <a href=""><i class="fa-regular fa-pen-to-square me-3"></i></a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#edittimeModal">
+                  <i class="fa-regular fa-pen-to-square me-3"></i>
+                  </a>
+                   <!-- Modal -->
+             <div class="modal fade" id="edittimeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog  modal-dialog-centered modal-xl">
+                  <div class="modal-content ms-5">
+                     <div class="modal-header report-header">
+                     <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="fa-regular fa-circle-user me-2"></i>
+                        See by Users
+                        </h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        
+                        <div class="user-info-table table-bg">
+                           <table class="table table-bordered">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">User</th>
+                                    <th scope="col">Work Time</th>
+                                    <th scope="col">Invoiced</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td >User Name</td>
+                                    <td>00:20:20</td>
+                                    <td>02</td>
+                                 </tr>
+                                 
+                            </tbody>
+                        </table>
+                       </div>
+                      
+                      </div>
+                     <div class="modal-footer">
+                     <button type="button" class="btn report-close" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+               </div>
+            </div>
                    <a href=""><i class="fa-solid fa-trash-can"></i></a>
                   </div>
                   
                </div>
-               <div class="time-edit-area d-flex justify-content-between align-items-center bg-white rounded-3 px-5 py-3 my-4">
+               <div class="time-edit-area d-flex justify-content-between align-items-center primary-bg rounded-3 px-5 py-3 my-4">
                 <p>12:00 AM</p>
                 <p>5:05 AM</p>
                 <p>5h 00m</p>
                 <p>General Work</p>
                 <p>Not Working</p>
                 <div>
-                 <a href=""><i class="fa-regular fa-pen-to-square me-3"></i></a>
-                 <a href=""><i class="fa-solid fa-trash-can"></i></a>
+                 <a href="#" data-bs-toggle="modal" data-bs-target="#edittimeModal">
+                  <i class="fa-regular fa-pen-to-square me-3"></i>
+                  </a>
+                   <!-- Modal -->
+             <div class="modal fade" id="edittimeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog  modal-dialog-centered modal-xl">
+                  <div class="modal-content ms-5">
+                     <div class="modal-header report-header">
+                     <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <i class="fa-regular fa-circle-user me-2"></i>
+                        See by Users
+                        </h1>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        
+                        <div class="user-info-table table-bg">
+                           <table class="table table-bordered">
+                              <thead>
+                                 <tr>
+                                    <th scope="col">User</th>
+                                    <th scope="col">Work Time</th>
+                                    <th scope="col">Invoiced</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td >User Name</td>
+                                    <td>00:20:20</td>
+                                    <td>02</td>
+                                 </tr>
+                                 
+                            </tbody>
+                        </table>
+                       </div>
+                      
+                      </div>
+                     <div class="modal-footer">
+                     <button type="button" class="btn report-close" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+               </div>
+            </div>
+                 <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                 </div>
                 
              </div>
@@ -67,9 +164,11 @@
 </template>
 
 <script>
+import TopFilter from '../components/includes/TopFilter.vue';
 import ApexCharts from 'apexcharts'
 export default {
     name: 'TimetrackdashboardEditTime',
+    components:{TopFilter},
 
     data() {
         return {
@@ -394,7 +493,8 @@ export default {
           }]
         },
         dataLabels: {
-          enabled: false
+          enabled: false,
+         
         },
         markers: {
           size: 0,
@@ -417,8 +517,11 @@ export default {
             opacityFrom: 0.7,
             opacityTo: 0.9,
             stops: [0, 100]
-          }
+          },
+          colors:['#382A57'],
+
         },
+      
         };
 
         var chart = new ApexCharts(document.querySelector("#edit-timeChart"), options);
@@ -434,7 +537,8 @@ export default {
         activeEl.target.classList.add('active')
       }
       
-      document
+      window.onload=function(){
+        document
         .querySelector('#one_month')
         .addEventListener('click', function(e) {
           resetCssClasses(e)
@@ -483,6 +587,8 @@ export default {
           new Date('27 Feb 2013').getTime()
         )
       })
+      }
+      
       
     },
 
@@ -492,6 +598,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 
 </style>

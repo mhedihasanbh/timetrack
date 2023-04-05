@@ -6,14 +6,14 @@
          <h4>Users</h4>
       </div>
       <div class="user-info-right w-25">
-         <form action="" method="" class="d-flex gap-2 align-items-center">
-            <select class="form-select">
+         <form action="" method="" class="user-filerForm d-flex gap-2 align-items-center">
+            <select id="selectbox3" class="form-control user-filterBtn decorated"  >
                <option selected>Name</option>
                <option value="1">Team</option>
                <option value="2">Id</option>
                <option value="2">Tracking Status</option>
             </select>
-            <select class="form-select">
+            <select id="selectbox4" class="form-control user-filterBtn">
                <option value="1">Ascending</option>
                <option value="2">Descending</option>
             </select>

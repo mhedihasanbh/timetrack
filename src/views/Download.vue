@@ -1,8 +1,13 @@
 <template>
+ <div>
+  <TopFilter/>
+ </div>
     <div>
-        
-              <p>Download</p>
-              <p>Download & install this app on your computer to track your work</p>
+        <div class="download-top py-4 text-center">
+         
+          <p class="project-title">Download & install this app on your computer to track your work</p>
+        </div>
+              
               <div class="row">
                 <div class="col-lg-6">
                    <div class="download-area  bg-white p-5 rounded-3 my-3">
@@ -37,13 +42,13 @@
                  </div>
                 </div>
                 <div class="col-lg-6">
-                  <h6>For mass-installation only</h6>
+                  <h6 class="project-title">For mass-installation only</h6>
                   <p class="py-3">If installing across computers on a network, download the .BAT or the .MSI installation file</p>
                   <div class="download-button">
-                    <a href="" class="my-4 rounded-3" >DOWNLOAD .BAT INSTALLATION FILE</a>
+                    <a href="" class="primary-btn my-4 rounded-3" >DOWNLOAD .BAT INSTALLATION FILE</a>
                    </div>
                   <div class="download-button">
-                    <a href="" class="rounded-3" >DOWNLOAD .MSI INSTALLATION FILE</a>
+                    <a href="" class="primary-btn rounded-3" >DOWNLOAD .MSI INSTALLATION FILE</a>
                   </div>
                   <p class="py-3 w-50">Installations done using .BAT and .MSI files will not automatically update. You'll need to manually update the app when new versions are released.</p>
                 </div>
@@ -53,8 +58,10 @@
 </template>
 
 <script>
+import TopFilter from '../components/includes/TopFilter.vue';
 export default {
     name: 'TimetrackdashboardDownload',
+    components:{TopFilter},
 
     data() {
         return {

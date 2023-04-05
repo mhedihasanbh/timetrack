@@ -1,10 +1,10 @@
 <template>
  
          <div class="profile-top">
-                <h3>My Account</h3>
+                <h4 class="project-title">My Account</h4>
                 <div class="profile-btns my-4">
-                  <router-link to="/profile"  class="profile-btn m-0">Profile</router-link>
-                  <router-link to="/profilesecurity"  class="security-btn">Security</router-link>
+                  <router-link to="/profile"  class="primary-btn profile-btn me-2">Profile</router-link>
+                  <router-link to="/profilesecurity"  class="primary-bg text-dark security-btn">Security</router-link>
                 </div>
                 </div>
                 <div class="profile-form">
@@ -19,7 +19,7 @@
                       <input type="password" class="form-control" id="exampleFormControlInput3" placeholder="Password">
                     </div>
                     <div class="mb-5">
-                      <select class="form-select" aria-label="Default select example">
+                      <select class="form-select p-2 ps-3 " aria-label="Default select example">
                         <option selected>Time Format</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -27,14 +27,14 @@
                       </select>
                     </div>
                     <div class="mb-3">
-                      <input class="form-check-input h-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                      <input class="form-check-input profile-check h-0" type="checkbox" value="" id="flexCheckChecked" checked>
                       <label class="form-check-label ms-3" for="flexCheckChecked">
                         Receive daily Hours Tracked email report
                       </label>
                     </div>
                     <div class="mb-3">
-                    <button type="submit" class="btn cancel-btn">CANCEL</button>
-                    <button type="submit" class="btn save-btn">SAVE</button>
+                    <button type="submit" class="cancel-btn primary-bg text-dark me-3">CANCEL</button>
+                    <button type="submit" class="primary-btn save-btn">SAVE</button>
                   </div>
                   </form>
                </div>

@@ -1,215 +1,232 @@
 <template>
-    <div class="project-top d-flex justify-content-between ">
-                <div><h2>Meeting</h2></div>
-                <div class="top-item-area d-flex gap-5 bg-white rounded p-2 px-3">
-                   <div class="top-item">
-                    <a href="">
-                      <img src="assets/images/filter.png"/>
-                      <span class="ms-2">Filter</span>
-                    </a>
-                   </div>
-                   <div class="top-item">
-                    <a href="">
-                      <img src="assets/images/groupStatus.png"/>
-                      <span class="ms-2">Import/Export</span>
-                    </a>
-                   </div>
-                   <div class="top-item meeting-top-add" >
-                    <a @click='toggle = !toggle'>
-                      <i class="fa-solid fa-plus"></i>
-                    </a>
-                   </div>
-                </div>
-              </div>
-               <!---plus icon details start--->
-               <div class="meeting-area bg-white rounded-3 p-3 my-4 " v-show="toggle">
-                 <div class="view-box d-flex justify-content-between py-3">
-                  <div class="box-icon d-flex gap-3">
-                    <div>
-                      <img src="assets/images/meetingcolor.png"/>
-                    </div>
-                     <p>Color</p>
-                  </div>
-                 </div>
-                <div class="view-box d-flex justify-content-between py-3">
-                  <div class="box-icon d-flex gap-3">
-                    <div>
-                      <img src="assets/images/meeting-cancel.png"/>
-                    </div>
-                     <p>Cancel Meeting</p>
-                  </div>
-                </div>
-                <div class="view-box d-flex justify-content-between py-3">
-                  <div class="box-icon d-flex gap-3">
-                    <div>
-                      <img src="assets/images/meeting-archive.png"/>
-                    </div>
-                     <p>Archive Meeting</p>
-                  </div>
-                  
-                </div>
-                <div class="view-box d-flex justify-content-between py-3">
-                  <div class="box-icon d-flex gap-3">
-                    <div>
-                      <img src="assets/images/meeting-delete.png"/>
-                    </div>
-                     <p>Delete Meeting</p>
-                  </div>
-                </div>
-              </div>
-              <!-----plus icon details end---->
-              <div class=" d-flex justify-content-around meeting-details bg-white rounded-3 py-4 my-2">
-                 <small>Title</small>
-                 <small>ID</small>
-                 <small>Status</small>
-                 <small>Task</small>
-                 <small>Date</small>
-                 <small>Time</small>
-              </div>
-              <div class=" d-flex justify-content-around meeting-details bg-white rounded-3 py-4 my-2">
-                 <button type="button" class="btn timeSheet-approave-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                bizpeak
-              </button>
-              <!-- Modal -->
-             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="assets/images/meeting-details.PNG"/>
-                    </div>
-                  
-                  </div>
-                </div>
-              </div>
-             
-              <button type="button" class="btn timeSheet-approave-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                0011222
-              </button>
-              <!-- Modal -->
-             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="assets/images/meeting-details.PNG"/>
-                    </div>
-                  
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="btn timeSheet-approave-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                upcoming
-              </button>
-              <!-- Modal -->
-             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="assets/images/meeting-details.PNG"/>
-                    </div>
-                  
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="btn overdue-btn" data-bs-toggle="modal" data-bs-target="#exampleModal12">
-                OverDue
-              </button>
-              <!-- Modal -->
-             <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel12" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel12">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <img src="assets/images/meetingtask.PNG"/>
-                    </div>
-                  
-                  </div>
-                </div>
-              </div>
-               
-               
-               
-               
-                <small>jan 18, 2023</small>
-                <small>12.00 PM</small>
-             </div>
-           
-         
-           
-            <div class="new-meeting">
-              <!-- Button trigger modal -->
-               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                 <i class="fa-regular fa-plus me-2"></i>ADD Meeting
-               </button>
-               <!-- Modal -->
-               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                 <div class="modal-dialog ">
-                   <div class="modal-content">
-                     <div class="modal-header">
-                       <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Meeting </h1>
-                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                     </div>
-                   
-                       <form action="" method="">
+   <TopFilter/>
+   <div class="meeting-areas d-flex justify-content-center align-items-center h-100 flex-column py-5">
+    <div class="meeting pt-5">
+      <div class="meeting-icon text-center pt-5">
+        <i class="fas fa-handshake"></i>
+      </div>
+      <h3>Create your  meeting</h3>
+      <div class="meeting-add  text-center">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#addMeetingModal">
+          <i class="fas fa-plus"></i>
+          </a>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="addMeetingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                     <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Meeting</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
                         <div class="modal-body">
-                         <div class="mb-3">
-                           <label for="exampleFormControlInput1" class="form-label text-start">Meeting Title</label>
-                          <input type="text" name="" class="form-control" id="exampleFormControlInput1" >
-                         </div>
-                         <div class="row g-3 mb-3">
-                          <div class="col">
-                            <label for="date">Date:</label>
-                            <input type="date" class="form-control" value="2023-02-12" />
+                          <div class="meeting-add-form">
+                            <form action="" method="">
+                              <div class="mb-3">
+                                <label>Meeting Tittle</label>
+                                <input type="text" class="form-control" placeholder="add meeting tittle" name="" />
+                              </div>
+                              
+                              <div class="row g-3 mb-3">
+                              <div class="col">
+                                <label>Meeting Date</label>
+                                <input type="date" class="form-control" placeholder="add meeting tittle" name="" />
+                              </div>
+                              <div class="col">
+                                <label>Start Time</label>
+                                <input type="time" class="form-control"/>
+                              </div>
+                            </div>
+                              <div class="row g-3 mb-3">
+                              <div class="col">
+                                <label>Task (Optional)</label>
+                                <input type="text" class="form-control" placeholder="" name="" />
+                              </div>
+                              <div class="col">
+                                <label>Duration(Hrs/mins)</label>
+                                <div class="d-flx gap-2">
+                                  <select id="selectbox1" class="w-50 text-dark">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    
+                                </select>
+                                <select id="selectbox2" class="w-50 text-dark">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    
+                                </select>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                                <label>Participant(optional)</label>
+                                <input type="text" class="form-control" placeholder="" name="" />
+                              </div>
+                            </form>
                           </div>
-                          <div class="col">
-                            <label for="date">Start Time:</label>
-                            <input type="time" id="appt" class="form-control" value="16:32:55">
-                          </div>
                         </div>
-                         <div class="mb-3">
-                          <label for="exampleFormControlInput1" class="form-label text-start">Location</label>
-                         <input type="text" name="" class="form-control" id="exampleFormControlInput1" >
+                        <div class="modal-footer">
+                        <button type="button" class="primary-bg px-3 py-2 border-none" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="primary-btn px-3 py-2">Create Meeting</button>
                         </div>
-                        <div class="mb-3">
-                          <label for="exampleFormControlInput1" class="form-label text-start">Participant (Optional)</label>
-                         <input type="text" name="" class="form-control" id="exampleFormControlInput1" >
-                        </div>
-                        <div class="mb-3">
-                          <label for="exampleFormControlInput1" class="form-label text-start">Agenda (Optional)</label>
-                         <input type="text" name="" class="form-control" id="exampleFormControlInput1" >
-                        </div>
-                        
-                      </div>
-                     <div class="modal-footer">
-                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                       <button type="button" class="btn primary-button">Create Meeting</button>
                      </div>
-                   </form>
-                   </div>
+                  </div>
+                  </div>
+    </div>
+   </div>
+  
+  <table class="table table-sm">
+  <thead>
+    <tr>
+      <th>Project Name</th>
+          <th>Meeting ID</th>
+          <th>Status</th>
+          <th>Task</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th class="text-center">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-bs-toggle="modal" data-bs-target="#addTimeModal">communication project</td>
+          <td>000008</td>
+          <td data-bs-toggle="modal" data-bs-target="#addTimeModal">
+            <a href="#">upcoming</a>
+          </td>
+          <td>test project</td>
+          <td>March 30, 2023</td>
+          <td>12.00 AM</td>
+          <td class="text-center">
+            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="modal fade" id="addTimeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header remove-timeHeader d-flex justify-content-between">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">communication project</h1>
+              
+              <button type="button" class="btn-close remove-closeBtn" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                 <div class="row">
+                  <div class="col-lg-7">
+                    <form action="" method="">
+                              <div class="mb-3">
+                                <label>Meeting Agenda</label>
+                                 <textarea class="form-control"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label>Decession Note</label>
+                                 <textarea class="form-control"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label>Key Decession</label>
+                                 <textarea class="form-control"></textarea>
+                              </div>
+                        </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="meeting-edit-form">
+                            <form action="" method="">
+                              <div class="mb-3">
+                                <label>Meeting Tittle</label>
+                                <input type="text" class="form-control" placeholder="add meeting tittle" name="" />
+                              </div>
+                              
+                              <div class="row g-3 mb-3">
+                              <div class="col">
+                                <label>Meeting Date</label>
+                                <input type="date" class="form-control" placeholder="add meeting tittle" name="" />
+                              </div>
+                              <div class="col">
+                                <label>Start Time</label>
+                                <input type="time" class="form-control"/>
+                              </div>
+                            </div>
+                              <div class="row g-3 mb-3">
+                              <div class="col">
+                                <label>Task (Optional)</label>
+                                <input type="text" class="form-control" placeholder="" name="" />
+                              </div>
+                              <div class="col">
+                                <label>Durationssss(Hrs/mins)</label>
+                                <div class="d-flx gap-2 text-dark">
+                                  <select id="selectbox1 " class="w-50 meeting-duration">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    
+                                </select>
+                                <select id="selectbox2" class="w-50">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    
+                                </select>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="mb-3">
+                                <label>Participant(optional)</label>
+                                <input type="text" class="form-control" placeholder="" name="" />
+                              </div>
+                              <div class="meeting-topBtns d-flex gap-2 text-end">
+                              <a href="#" class="meeting-review-btn px-4 py-2">Submit For Review</a>
+                              <a href="#" class="primary-btn px-4 py-2">Publish</a>
+                            </div>
+                            </form>
+                          </div>
+                  </div>
                  </div>
-               </div>
-               
-             </div>
+                   
+                  </div>
+              </div>
+        </div>
+    </div>
          
 </template>
 
 <script>
+import TopFilter from '../components/includes/TopFilter.vue';
 export default {
     name: 'TimetrackdashboardMeeting',
+    components:{TopFilter},
 
     data() {
         return {

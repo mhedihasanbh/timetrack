@@ -9,12 +9,36 @@
   
   /* Small devices (landscape phones, less than 768px) */
   @media (max-width: 767.98px) {
-    .chart-area,.project-box
-    {
-      margin-bottom: 40px;
+   
+     /*---dashboard home start ----*/
+     .header-title{
+      gap: 0px!important;
      }
-     .productivity-bar-area{
-      margin-bottom: 40px;
+     .header-title h4{
+      font-size: 14px;
+     }
+     .dashboard-heading{
+      display: none;
+     }
+     .header-search input {
+       padding: 2px 2px; 
+     }
+     .header-search i{
+      display: none;
+     }
+     .dashboard-mini-chart{
+      margin-bottom: 20px;
+     }
+     .table-sm  {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+  }
+     /*---dashboard home end----*/
+     .top-filter-area{
+      flex-wrap: wrap;
+      gap: 25px;
      }
      .project-top{
       margin-top: 20px;
@@ -32,6 +56,17 @@
     .screenshot-image{
       margin-bottom: 12px;
     }
+    /*project*/
+    .report-left form{
+      flex-wrap: wrap;
+    }
+   .project-report select,.project-report input{
+    margin-bottom: 12px;
+   }
+   /*attendance*/
+   .report-right{
+    width: 100%!important;
+   }
   }
   
   /* Medium devices (tablets, less than 992px) */

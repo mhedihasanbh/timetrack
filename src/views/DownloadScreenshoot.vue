@@ -19,7 +19,7 @@
                 <form action="" method="" class="d-flex gap-2 align-items-center">
                    <div class="calander-icon">
                       <i class="fa-regular fa-calendar-days icon me-2"></i>  
-                     <input type="text" class="form-control filter-by-week" id="datepicker" placeholder="Filter  Date">
+                     <input type="date" class="form-control filter-by-week"  placeholder="Filter  Date">
                    </div> 
                    <select class="form-select filter-by-week">
                      <option selected>Last Week</option>
@@ -98,12 +98,15 @@
                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
                 </ul>
              </nav>
-         </div>
+         </div> 
+         
+
   </template>
   
   <script>
+
   export default {
-    name: 'TimetrackdashboardUser',
+    name: 'downloadScrennshot',
   
     data() {
         return {
@@ -112,7 +115,7 @@
     },
   
     mounted() {
-        
+      
     },
   
     methods: {
@@ -121,6 +124,6 @@
   };
   </script>
   
-  <style lang="scss" scoped>
+  <style  scoped>
   
   </style>

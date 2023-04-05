@@ -1,6 +1,11 @@
 <template>
-   
-         <h5 clss="py-4">Company Setting</h5>
+   <div>
+      <TopFilter/>
+   </div>
+         <div class="project-title">
+            <h5 clss="py-4">Company Setting</h5>
+         </div>
+       
          <div class="row my-4">
             <div class="col-lg-4 ">
                <div class="compnay-details-left bg-white rounded-3 px-4 py-5 h-100">
@@ -14,78 +19,68 @@
                </div>
             </div>
             <div class="col-lg-8 ">
-               <div class="compnay-details-right bg-white rounded-3 px-2 py-5 h-100">
-                  <p>Company details</p>
+               <div class="compnay-details-right primary-bg rounded-3 px-4 py-5 h-100">
+                  <h5 class="project-title">Company details</h5>
                   <form action="" method="" class="">
-                     <div class="details-form my-3">
-                        <small>Name*</small>
-                        <select class="form-control border-0">
-                           <option>Ashikur Rahim</option>
-                           <option>item 2</option>
-                           <option>item 3</option>
-                           <option>item 4</option>
-                           <option>item 5</option>
+                     <div class="details-form my-3 p-3">
+                        <label>Integrations’ status</label>
+                        <select class="form-control w-100">
+                           <option>Off</option>
+                           <option>on</option>
+                           
                         </select>
                      </div>
-                     <div class="details-form my-3">
+                     <div class="details-form my-3 p-3">
                         <small>Owner</small>
                         <select class="form-control border-0">
                            <option>Ashikur Rahim</option>
-                           <option>item 2</option>
-                           <option>item 3</option>
-                           <option>item 4</option>
-                           <option>item 5</option>
+                           <option>sajib</option>
+                           <option>yasin</option>
+                           
                         </select>
                      </div>
-                     <div class="details-form my-3">
+                     <div class="details-form my-3 p-3">
                         <small>Time Zone</small>
                         <select class="form-control border-0">
                            <option>(UTC -08:00) Los  Angeles,America</option>
-                           <option>item 2</option>
-                           <option>item 3</option>
-                           <option>item 4</option>
-                           <option>item 5</option>
+                           <option>8.00</option>
+                           <option>9.00</option>
+                          
                         </select>
                      </div>
-                     <div class="details-form my-3">
+                     <div class="details-form my-3 p-3">
                         <small>Start Week on</small>
                         <select class="form-control border-0">
                            <option>Monday</option>
-                           <option>item 2</option>
-                           <option>item 3</option>
-                           <option>item 4</option>
-                           <option>item 5</option>
+                           <option>Sunday</option>
+                           <option>Tuesday</option>
+                           <option>Friday</option>
+                          
                         </select>
                      </div>
                      <p>Configuration</p>
-                     <div class="details-form my-3">
+                     <div class="details-form my-3 p-3">
                         <small>Tracking type</small>
                         <select class="form-control border-0">
                            <option>Interactive Only</option>
-                           <option>item 2</option>
-                           <option>item 3</option>
-                           <option>item 4</option>
-                           <option>item 5</option>
+                           <option>Active</option>
+                           
                         </select>
                      </div>
-                     <div class="details-form my-3">
+                     <div class="details-form my-3 p-3">
                         <small>Blur screenshots</small>
                         <select class="form-control border-0">
                            <option>Only for certain people</option>
-                           <option>item 2</option>
-                           <option>item 3</option>
-                           <option>item 4</option>
-                           <option>item 5</option>
+                           <option>only junior people</option>
+                           <option>only senior people</option>
+                           
                         </select>
                      </div>
-                     <div class="details-form my-3">
+                     <div class="details-form my-3 p-3">
                         <small>Don’t time out on calls</small>
                         <select class="form-control border-0">
                            <option>For everyone</option>
-                           <option>item 2</option>
-                           <option>item 3</option>
-                           <option>item 4</option>
-                           <option>item 5</option>
+                          
                         </select>
                      </div>
                      <a href="">Learn more</a>
@@ -218,8 +213,10 @@
 </template>
 
 <script>
+import TopFilter from '../components/includes/TopFilter.vue';
 export default {
     name: 'TimetrackdashboardCompnay',
+    components:{TopFilter},
 
     data() {
         return {
