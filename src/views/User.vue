@@ -1,6 +1,6 @@
 <template>
          <TopFilter/>
-         <div class="user-wrapper bg-white p-2 my-3 ">
+   <div class="user-wrapper bg-white p-2 my-3 ">
    <div class="user-info-filter d-flex justify-content-between px-3">
       <div class="user-info-title">
          <h4>Users</h4>
@@ -152,7 +152,8 @@
       </div>
    </div>
    <!-----USER INFO BOX4 END----->
-</div>
+  </div>
+  
 </template>
 
 <script>

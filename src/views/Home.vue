@@ -49,8 +49,8 @@
                </div>
                
              </form>
-             <div class="dashboard-table">
-               <table class="table   table-bordered my-3">
+             <div class="dashboard-table w-100">
+               <table class="table  table-bordered my-3">
             <thead>
                <tr>
                   <th>Duration</th>

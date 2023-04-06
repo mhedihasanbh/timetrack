@@ -1,13 +1,15 @@
 <template>
- 
-         <div class="profile-top">
-                <h4 class="project-title">My Account</h4>
-                <div class="profile-btns my-4">
-                  <router-link to="/profile"  class="primary-btn profile-btn me-2">Profile</router-link>
-                  <router-link to="/profilesecurity"  class="primary-bg text-dark security-btn">Security</router-link>
-                </div>
-                </div>
-                <div class="profile-form">
+  <div class="profile-area bg-white p-4">
+    <nav>
+  <div class="nav nav-tabs profile-tab" id="nav-tab" role="tablist">
+    <button class="nav-link profile-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Profile</button>
+    <button class="nav-link profile-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Security</button>
+    
+  </div>
+</nav>
+<div class="tab-content " id="nav-tabContent">
+  <div class="tab-pane profile fade show active mt-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+    <div class="profile-form">
                   <form action="" method="">
                     <div class="mb-3">
                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
@@ -38,12 +40,41 @@
                   </div>
                   </form>
                </div>
-          
-  </template>
+  </div>
+  <div class="tab-pane fade mt-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+    <div class="profile-form">
+                  <form action="" method="">
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Two-Factor Authentication (2FA)">
+                    </div>
+                   
+                    
+                    
+                    <div class="mb-3">
+                      <input class="form-check-input profile-check h-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                      <label class="form-check-label ms-3" for="flexCheckChecked">
+                        Enable Authenticator
+                      </label>
+                    </div>
+                    <div class="mb-3">
+                      <p>It is highly recommended that you setup a two-step verification for your account. Enabling 2FA gives you more security and protection against possible phishing, social engineering and password brute-force attacks</p>
+                    </div>
+                    <div class="mb-3">
+                    <button type="submit" class="cancel-btn primary-bg text-dark me-3">CANCEL</button>
+                    <button type="submit" class="primary-btn save-btn">SAVE</button>
+                  </div>
+                  </form>
+               </div>
+  </div>
+  
+</div>
+  </div>
+
+</template>
 
 <script>
 export default {
-    name: 'TimetrackdashboardProfile',
+    name: 'TimetrackProfile',
 
     data() {
         return {

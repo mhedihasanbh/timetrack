@@ -2,7 +2,9 @@
     <div>
      <TopFilter/>
     </div>
-        
+           <div class="invite-area">
+            
+           </div>
              <div class="row">
               <div class="col-lg-8">
                  <h5 class="project-title py-4">INVITE BY EMAIL</h5>

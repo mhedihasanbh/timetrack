@@ -2,10 +2,10 @@
     <header class="header fixed-top d-flex justify-content-between align-items-center py-2">
       <div class="header-title d-flex gap-sm-2 gap-5 align-items-center">
         <h4>Time Trakcer</h4>
-       <a href="#" class="sidebarCollapse ms-4" id="toggleSidebar" data-placement="bottom">
-                <span class="fa-solid fa-bars"></span>
+       <a href="#" class="sidebarCollapse ms-5" id="toggleSidebar" data-placement="bottom">
+                <span class="fa-solid fa-bars bar-icon ps-4"></span>
               </a>
-        <h4 class="dashboard-heading">Dashboard</h4>
+        <h6 class="dashboard-heading ms-3 text-white">Dashboard</h6>
       </div>
       <div class="header-search w-25">
         <form action="" method="">

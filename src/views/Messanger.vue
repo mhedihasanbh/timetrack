@@ -3,35 +3,152 @@
        <TopFilter/>
     </div>
     <div class="row g-0 py-5">
-        <div class="col-lg-8">
-            <div class="messanger-left-area p-4 ms-5 rounded-4">
+        <div class="col-lg-3">
+            <div class="messanger-wrapper h-100">
+                <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser1.jpg" class="rounded-circle" width="60" height="60"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>priti</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser2.jpg" class="rounded-circle" width="60" height="60"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>sajib Bhuyan</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser3.jpg" class="rounded-circle" width="60" height="60"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>sajib Bhuyan</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser4.jpg" class="rounded-circle" width="60" height="60"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>sajib Bhuyan</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser.png" class="rounded-circle" width="60px" height="60px"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>sajib Bhuyan</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser.png" class="rounded-circle" width="60" height="60"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>sajib Bhuyan</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser.png" class="rounded-circle" width="60px" height="60px"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>sajib Bhuyan</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            <div class="messanger-user d-flex gap-2 my-2 p-3">
+              <div class="messanger-user-image">
+               <a href="#">
+                <img src="assets/images/fbuser.png" class="rounded-circle" width="60" height="60"/>
+                </a>
+              </div>
+              <div class="user-content">
+                <a href="#">
+                <p>sajib Bhuyan</p>
+                <p><span>you:</span>hello.18m</p>
+                </a>
+               
+              </div>
+            </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-6">
+            <div class="messanger-middle-area p-4 ms-2 rounded-4 h-100">
                 <div class="messanger-top d-flex align-items-center gap-3">
                     <div>
                         <img src="assets/images/fbuser.png" width="60px" height="60px"/>
                     </div>
                      <div>
-                        <h3 class="project-title messanger-user-Name">Ashikur Rahim</h3>
+                        <h5 class="project-title messanger-user-Name">Ashikur Rahim</h5>
                     <p>@ashik</p>
                      </div>
                     
                 </div>
-                <div class="message-box bg-white rounded-3 p-4 my-5 w-75">
+                <div class="message-box bg-white rounded-3 p-4 my-5 ">
                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
-                <div class="message-box sender-box  rounded-3 p-3 my-5 w-50 mx-auto">
+                <div class="message-box sender-box  rounded-3 p-3 my-5 w-75 ms-auto">
                    <p class="text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
                 <small class="d-block text-center">Satday</small>
-                <div class="message-box bg-white rounded-3 p-4 my-5 w-75">
+                <div class="message-box bg-white rounded-3 p-4 my-5 ">
                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
-                <div class="message-box sender-box  rounded-3 p-3 my-5 w-50 mx-auto">
+                <div class="message-box sender-box  rounded-3 p-3 my-5 w-75 ms-auto">
                    <p class="text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
                 <div class="type-message">
                     <form>
                         <div class="send-icon">
-                            <input type="text" class="form-control messanger-input w-75" placeholder="Typing...."/>
+                            <input type="text" class="form-control messanger-input w-100" placeholder="Typing...."/>
                             <button type="submit"> <i class="fa-regular fa-paper-plane icon" ></i> </button>
                         </div>
                        
@@ -39,14 +156,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="messanger-right-area p-4">
+        <div class="col-lg-3">
+            <div class="messanger-right-area p-4 h-100">
                 <div class="messanger-top d-flex align-items-center gap-3">
                     <div>
                         <img src="assets/images/fbuser.png" width="60px" height="60px"/>
                     </div>
                      <div>
-                        <h3 class="project-title messanger-user-Name">Ashikur Rahim</h3>
+                        <h6 class="project-title messanger-user-Name">Ashikur Rahim</h6>
                     <p>@ashik</p>
                      </div>
                 </div>

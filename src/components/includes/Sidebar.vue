@@ -109,7 +109,6 @@
                    <div class="sub-menu" v-show='togglefour'>
                      <router-link to="/billing" class="link" @click='togglefour = !togglefour' v-on:click='dropdown("togglefour")'>Billing</router-link>
                      <router-link to="/userseeting" class="link" @click='userseeting = !userseeting' v-on:click='dropdown("userseeting")'>User</router-link>
-                     <router-link to="/group"   class="link" @click='togglefour = !togglefour' v-on:click='dropdown("togglefour")'>Groups</router-link>
                      <router-link to="/emailNotification" class="link" @click='togglefour = !togglefour' v-on:click='dropdown("togglefour")'>Email Notifications</router-link>
                      <router-link to="/integration"   class="link" @click='togglefour = !togglefour' v-on:click='dropdown("togglefour")'>Integrations</router-link>
                      <router-link to="/compnay"   class="link" @click='togglefour = !togglefour' v-on:click='dropdown("togglefour")'>Company Setting</router-link>
@@ -132,17 +131,11 @@
                       </router-link> 
                   </div>
                 </li>
-                  <li  id="invite" >
-                   <div class="title ">
-                     <router-link to="/invite">
-                      <img src="assets/images/profile.png"/>
-                       <span>Invite</span>
-                      </router-link>
-                    </div>
-                  </li>
+                 
                   <li  id="profile">
                    <div class="title">
-                     <router-link to="/profile">
+                     <router-link to="/profile" @click="pageLoad()">
+                     <div v-if="loading" class="spinner-border"></div>
                        <img src="assets/images/profile.png"/>
                        <span>Profile</span>
                       </router-link>
@@ -160,6 +153,7 @@ export default {
     name: 'TimetrackdashboardSidebar',
     data() {
         return {
+          loading:false,
           toggle: false,
           toggleone: false,
           toggletwo: false,
@@ -169,6 +163,12 @@ export default {
         };
     },
     methods:{
+      pageLoad(){
+        this.loading=!false;
+       setTimeout(()=>{
+         this.loading=!true
+       },1000)
+      },
       dropdown(e){
         if('toggle' == e){
           this.toggleone = false

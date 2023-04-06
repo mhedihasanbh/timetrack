@@ -657,6 +657,12 @@
        
  </template>
  
+ 
+ 
+ <style  scoped>
+ 
+ </style>
+
  <script>
  import TopFilter from '../components/includes/TopFilter.vue';
  export default {
@@ -686,7 +692,3 @@
    },
  };
  </script>
- 
- <style lang="scss" scoped>
- 
- </style>

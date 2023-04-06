@@ -37,7 +37,7 @@
                <div class="modal-dialog  modal-dialog-centered modal-lg">
                   <div class="modal-content ms-5">
                      <div class="modal-header report-header">
-                     <h1 class="modal-title fs-5" id="exampleModalLabel">Add Task</h1>
+                     <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-bars-progress me-2"></i>Add Task</h1>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                      </div>
                      <div class="modal-body">
@@ -209,7 +209,7 @@
                      </a>
                      <ul class="dropdown-menu action-multiList">
                         <li><a href="#"> <i class="fa-regular fa-clipboard me-2"></i>Copy</a></li>
-                        <li><a href="#"> <i class="fa-solid fa-up-down-left-right me-2"></i>Move</a></li>
+                        
                         <li><a href="#"> <i class="fa-solid fa-trash-can me-2"></i>Delete</a></li>
                         
                      </ul>

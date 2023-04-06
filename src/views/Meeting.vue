@@ -16,7 +16,7 @@
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                      <div class="modal-content">
                         <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Meeting</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-handshake me-2"></i>Add Meeting</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -115,7 +115,12 @@
           <td>March 30, 2023</td>
           <td>12.00 AM</td>
           <td class="text-center">
-            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical"></i>
+              <ul class="dropdown-menu action-dropdown p-0 pb-3 action-multiList">
+                <li><a href="#"> <i class="fa-regular fa-clipboard me-2"></i>Copy</a></li>
+                <li><a href="#"> <i class="fa-solid fa-trash-can me-2"></i>Delete</a></li>
+              </ul>
+            </a>
           </td>
         </tr>
       </tbody>

@@ -39,7 +39,7 @@
     color:#fff;
 }
 .sidebarCollapse span {
-    font-size: 22px;
+    font-size: 17px;
     color: #fff;
 }
 .header-search input{
@@ -688,7 +688,7 @@ table td {
     padding: 20px;
 }
 .action-multiList li{
-    padding: 20px 10px;
+    padding: 12px 10px;
 }
 /*----time sheet---*/
 .tab-wrapper{
@@ -872,7 +872,14 @@ table td {
     background-color: #00A6AB!important;
     border-radius: 50%!important;
 }
-
+.profile-tab {
+    border: none;
+}
+.profile-link.active {
+    background-color: #42375B!important;
+    color:#fff!important;
+    border-radius: 0!important;
+}
 
 /*-----profile security -------*/
 .profile-security-form form{
@@ -882,7 +889,7 @@ table td {
     border: none;
 }
 /*messanger*/
-.messanger-left-area,.messanger-right-area{
+.messanger-wrapper,.messanger-middle-area,.messanger-right-area{
 background-color: #F7FAFF;
 margin-right: 5px;
 height: 100%;
@@ -895,7 +902,7 @@ height: 100%;
     content: 'Online';
     display: block;
     font-size: 12px;
-    top: 8px;
+    top: -1px;
     right: -44px;
     color: #279565;
 }
@@ -907,7 +914,7 @@ height: 100%;
 }
 .send-icon i {
     position: absolute;
-    right: 26%;
+    right: 0;
     top: -5px;
     padding: 10px 10px;
     color: #42375B;
@@ -1056,6 +1063,20 @@ margin-bottom: 25px;
 }
 .scope-area p,.used-time-area p{
     padding-bottom: 20px;
+}
+
+.billing-accordion-button:not(.collapsed) {
+    color: #fff!important;
+    background-color: #42375B!important;
+    
+}
+.accordion-button:not(.collapsed)::after {
+     background-image:none!important ; 
+     
+}
+.billing-accordion-button:focus {
+   border-color:none!important; 
+    box-shadow: none!important; 
 }
 /*---------user-------*/
 .secondary-btn{

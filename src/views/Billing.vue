@@ -51,46 +51,10 @@
                          <tr>
                           <td>Your credit card</td>
                            <td>
-                            <!-- <a href="" class="add-bill-card"><i class="fa-solid fa-plus"></i>ADD CARD</a> -->
+                         
                             <div class="add-card">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn  py-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                           
-                           <h6 class="primary-btn px-3 py-2"><i class="fa-solid fa-plus"></i>ADD CARD</h6>
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                           <div class="modal-dialog ">
-                              <div class="modal-content">
-                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Project title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                 </div>
-                                 <form action="" method="">
-                                    <div class="modal-body">
-                                       <div class="mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label text-start">Card Type</label>
-                                          <input type="text" name="" class="form-control" id="exampleFormControlInput1" >
-                                       </div>
-                                       <div class="mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label text-start">Card Number</label>
-                                          <input type="text" name="" class="form-control" id="exampleFormControlInput1">
-                                       </div>
-                                       <div class="mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label text-start">Card Details</label>
-                                         <textarea class="form-control" rows="6"></textarea>
-                                       </div>
-                                   
-                                    </div>
-                                    <div class="modal-footer">
-                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                       <button type="button" class="btn primary-button">Submit</button>
-                                    </div>
-                                 </form>
-                              </div>
-                           </div>
-                        </div>
-                           </div>
+                           <a href="https://sslcommerz.com/" class="primary-btn px-3 py-2">Add Payment Getway</a>
+                          </div>
                            </td>
                          </tr>
                          <tr>
@@ -161,7 +125,7 @@
                   <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button billing-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                           How does Time Tracker bill users?
                         </button>
                       </h2>
@@ -173,7 +137,7 @@
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button billing-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                           What payment methods are accepted by Time Tracker?
                         </button>
                       </h2>
@@ -185,7 +149,7 @@
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button billing-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                           Am I charged as the owner of the account even if I don’t track time?
                         </button>
                       </h2>
@@ -197,7 +161,7 @@
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <button class="accordion-button billing-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                           Am I charged as the owner of the account even if I don’t track time?
                         </button>
                       </h2>
@@ -209,7 +173,7 @@
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <button class="accordion-button billing-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                           Am I charged as the owner of the account even if I don’t track time?
                         </button>
                       </h2>

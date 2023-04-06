@@ -71,7 +71,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                            <div class="modal-content">
                               <div class="modal-header remove-timeHeader">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Add Manual Time</h1>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Remove Manual Time</h1>
                               
                                  <i class="fas fa-times fa-lg remove-closeBtn" data-bs-dismiss="modal" aria-label="Close"></i>
                              
@@ -104,7 +104,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-lg">
                            <div class="modal-content">
                               <div class="modal-header remove-timeHeader">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Tracking Records</h1>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Add Manual Time</h1>
                               
                                  <i class="fas fa-times fa-lg remove-closeBtn" data-bs-dismiss="modal" aria-label="Close"></i>
                               </div>
