@@ -1,5 +1,12 @@
 <template>
-  <div class="profile-area bg-white p-4">
+
+ <div>
+  <div class="profile-loader"  v-if="loader">
+      <Loader/>
+      <TopFilter/>
+    </div>
+   <div class="profile-area bg-white  p-4" v-if="!loader">
+    
     <nav>
   <div class="nav nav-tabs profile-tab" id="nav-tab" role="tablist">
     <button class="nav-link profile-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Profile</button>
@@ -69,21 +76,33 @@
   
 </div>
   </div>
+  
+ </div>
 
 </template>
 
 <script>
+import Loader from '../components/includes/Loading.vue'
+import TopFilter from '../components/includes/TopFilter.vue'
 export default {
     name: 'TimetrackProfile',
+    components:{Loader,TopFilter},
 
     data() {
         return {
+          loader:true
             
         };
     },
 
     mounted() {
         
+    },
+    created(){
+      setTimeout(() => {
+      this.loader=false
+    }, 1000);
+      
     },
 
     methods: {

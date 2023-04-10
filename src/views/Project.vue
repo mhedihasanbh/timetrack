@@ -1,10 +1,25 @@
 <template>
-   <TopFilter/>
-   <div class="user-report-area my-3 bg-white rounded p-3 h-100">
-      <div class="top-filter-area bg-white rounded p-3 d-flex justify-content-between">
-           <div class="report-left d-flex align-items-center flex-wrap gap-4 w-75">
-            <form action="" method="" class="d-flex align-items-center gap-2 w-75">
-               <select class="form-select filter-by-week" id="find-client" >
+<div>
+   
+   <div class="profile-loader"  v-if="loader">
+      <Loader/>
+ 
+    </div>
+    <div vif="!loader">
+       <!---project top area start --->
+      
+       <div class="filter-left d-flex align-items-center flex-wrap bg-white rounded p-3 w-100 " v-if="!loader">
+             <form action="" method="" class="project-filer d-flex gap-2">
+               <select class="form-select filter-by-week" aria-label="Default select example">
+                  <option selected>All Teams</option>
+                  <option value="1">
+                      All Team
+                  </option>
+                  <option value="2">Nasir Uddin</option>
+                  <option value="3">Mehedi</option>
+                  </select>
+               
+                <select class="form-select filter-by-week" id="find-client" >
                     <option selected>Active</option>
                     <option selected>
                      client one
@@ -23,13 +38,24 @@
                     <option  selected>Billing</option>
                     <option value="billing">search Billing</option>
                 </select>
+                   <select class="form-select filter-by-week">
+                     <option selected>Last Week</option>
+                     <option value="1">Last Month</option>
+                     <option value="2">Last year</option>
+                  </select>
+                  <a href="#" class="pt-2"> <i class="fa-solid fa-arrows-rotate"></i></a>
                
                  <div class="filter-btn w-100">
                     <button type="submit" class="primary-btn p-2">Apply Filter</button> 
                    
                  </div>
-              </form>
-            </div>
+               </form>
+             </div>
+              
+    <!---project area end --->
+   <div class="user-report-area my-3 bg-white rounded p-3 h-100">
+      <div class="top-filter-area bg-white rounded p-3 d-flex justify-content-between">
+           
             
           <div class="report-right d-flex gap-3">
             <div class="screenShoot-downloadBtn">
@@ -44,7 +70,7 @@
                      <div class="modal-header report-header">
                      <h1 class="modal-title fs-5" id="exampleModalLabel">
                         <i class="fa-regular fa-file"></i>
-                        Project Report
+                       Create New Project
                         </h1>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                      </div>
@@ -71,7 +97,7 @@
                            
                             <div class="no-client project-bg px-3 py-2">
                              <p class="fw-bold"><i class="fa-solid fa-triangle-exclamation"></i> No Clients Yet</p>
-                             <span>Start typing to create one</span>
+                            
                             </div>
                             </div>
                             <div class="col-lg-2">
@@ -389,30 +415,21 @@
                   <div class="modal-dialog modal-dialog-centered modal-lg">
                      <div class="modal-content">
                         <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Set Rate</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Member</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="member-add-area">
-                            <p class="member-title fw-bold py-2"><i class="fa-solid fa-check"></i> We'll apply this rate to all entries made by Ashikur Rahim Ashik on this project.</p>
-                            <form action="" method="">
-                               <div class="py-2">
-                                 <input type="text" class="form-control primary-bg w-75" placeholder="What is the new billable rate"/>
-                               </div>
-                               <div class="bill-rate">
-                                 <p>Apply this billable rate to:</p>
-                                 <div class="time-entry-from d-flex gap-3 align-items-center py-2">
-                                    <p><i class="fa-solid fa-check rate-check me-2"></i> Time entries from</p>
-                                    <div class="calander-icon">
-                                      <i class="fa-regular fa-calendar-days icon me-2"></i>  
-                                      <input type="date" class="form-control filter-by-week"  placeholder="filter date">
-                                   </div> 
-                                   <p>Onwards</p>
-                                 </div>
-                                 <p><i class="fa-solid fa-check rate-check me-2"></i>All past and future time entries </p>
-                               </div>
-                            </form>
-                          </div>
+                          <form action="" method="">
+                           <div class="mb-3">
+                              <input type="text" class="form-control" placeholder="member name"/>
+                           </div>
+                           <div class="mb-3">
+                              <input type="email" class="form-control" placeholder="member email"/>
+                           </div>
+                           <div class="mb-3">
+                              <input type="number" class="form-control" placeholder="member phone"/>
+                           </div>
+                          </form>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="primary-bg px-3 py-2 border-none" data-bs-dismiss="modal">Close</button>
@@ -438,9 +455,9 @@
                   <td>Ashik</td>
                   <td>
                      <div class="d-flex gap-4">
-                        <div class="primary-bg px-4 py-2">
+                        <!-- <div class="primary-bg px-4 py-2">
                         <a href=""><i class="fas fa-ellipsis-h"></i></a>
-                     </div>
+                     </div> -->
                     <div class="primary-bg px-4 py-2">
                      <a href=""><i class="fa-solid fa-arrows-rotate me-2"></i>Change</a>
                     </div>
@@ -604,7 +621,7 @@
                   <p class="fw-bold">Billable by default</p>
                   <p>All new entries on this project will be initially set as billable.</p>
                   <div class="ps-4 my-3">
-                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                     <input class="form-check-input custom-input-check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                   <label class="form-check-label ms-2" for="flexSwitchCheckChecked">Yes</label>
                   </div>
                  
@@ -640,11 +657,7 @@
                <div class="mb-3 form-switch p-0">
                   <p class="fw-bold py-2">Add Additional Fields</p>
                   <p>All time entries on this project will have these fields.</p>
-                   <div class="project-rate d-flex py-2">
-                  <select class="form-select primary-bg w-25" aria-label="Default select example">
-                  <option selected>Add more fields...</option>
-                  </select>
-                  </div>
+                   
                  
                </div>
             </div>
@@ -653,6 +666,11 @@
       </div>
      </div>
    </div>
+    </div>
+
+ 
+</div>
+   
    
        
  </template>
@@ -664,14 +682,17 @@
  </style>
 
  <script>
- import TopFilter from '../components/includes/TopFilter.vue';
+import Loader from '../components/includes/Loading.vue'
  export default {
+   props:['projectFilter'],
+    components:{Loader},
    name: 'projectTwo',
-   components:{TopFilter},
+  
  
    data() {
        return {
-         projectHistory:""
+         projectHistory:"",
+         loader:true
        };
    },
  
@@ -683,6 +704,12 @@
    projectArea.classList.toggle('project-area');
 });
    },
+   created(){
+      setTimeout(() => {
+      this.loader=false
+    }, 1000);
+      
+    },
  
    methods: {
       onChange(event){

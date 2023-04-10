@@ -1,8 +1,11 @@
 <template>
- <div>
+ <div v-if="loader">
+  <Loader/>
   <TopFilter/>
+  
  </div>
-    <div>
+ 
+    <div v-if="!loader">
         <div class="download-top py-4 text-center">
          
           <p class="project-title">Download & install this app on your computer to track your work</p>
@@ -59,18 +62,25 @@
 
 <script>
 import TopFilter from '../components/includes/TopFilter.vue';
+import Loader from '../components/includes/Loading.vue'
 export default {
     name: 'TimetrackdashboardDownload',
-    components:{TopFilter},
+    components:{TopFilter,Loader},
 
     data() {
         return {
-            
+            loader:true
         };
     },
 
     mounted() {
         
+    },
+    created(){
+      setTimeout(() => {
+      this.loader=false
+    }, 1000);
+      
     },
 
     methods: {

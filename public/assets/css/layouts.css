@@ -570,6 +570,17 @@ input[type="date"]{
     background-color: #42375B;
     color:#fff;
 }
+.project-filer{
+    flex:1;
+}
+.custom-input-check:checked{
+    background-color: #00A6AB!important;
+    border-color: #00A6AB!important;
+}
+.main-input-check:checked{
+    background-color: #42375B!important;
+    border-color: #fff!important;
+}
 /*====time track=====*/
 .track-icon-wrapper{
     background-color: #F4F6F8;
@@ -760,6 +771,17 @@ table td {
     text-align: center;
     border-radius: 50%;
 }
+.attdance-box-wrapper .box h6{
+text-align: justify;
+}
+.box{
+    background-color: #EBEDEE;
+}
+.box.boxtwo {
+    background-color: #00A6AB;
+    color: #fff;
+}
+
 /*-----productivity start-----*/
 .productivity-contentBox{
     background-color: #F7FAFF;
@@ -1282,7 +1304,8 @@ font-weight: 700;
     margin-right: 12px;
 } 
 /*===============compnay details==============*/
-.compnay-details-left p{
+
+.compnay-details-left ul li{
     padding-bottom: 30px;
 }
 .details-form{
@@ -1378,6 +1401,3 @@ font-weight: 700;
     z-index: -1;
 }
  
-  
-
-  

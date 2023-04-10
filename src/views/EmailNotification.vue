@@ -2,9 +2,9 @@
          <div class="notification-title d-flex justify-content-between py-4">
             <h5 clss="py-4">Email Notifications</h5>
             <div class="add-user-btn ">
-               <a href="#" class="primary-btn px-3 py-2 rounded-2">
+               <a href="#" class="primary-btn px-3 py-2 rounded-2" data-bs-toggle="modal" data-bs-target="#emailNotification">
                <i class="fa-solid fa-plus  me-2"></i>
-               <span class="" data-bs-toggle="modal" data-bs-target="#emailNotification">CREATE NEW</span>
+               <span class="" >CREATE NEW</span>
                </a>
             </div>
             <div class="modal fade" id="emailNotification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -3,23 +3,7 @@
       <TopFilter/>
      </div>
              <div class="schdule-area bg-white p-2">
-              <div class="project-top d-flex justify-content-between  py-3">
-                 <h4 class="project-title">work schedules</h4>
-                  <div>
-                      <form action="" method="" class="user-filerForm d-flex gap-2 align-items-center">
-              <select id="selectbox3" class="form-control user-filterBtn decorated"  >
-                <option selected>All Users Selected</option>
-                <option value="1">sajib</option>
-                <option value="2">rakib</option>
-           
-              </select>
-              <select id="selectbox4" class="form-control user-filterBtn">
-                <option value="1">12.00</option>
-                <option value="2">2.18</option>
-              </select>
-         </form>
-                  </div>
-                </div>
+              
                
                 <div class="schdule-edit d-flex justify-content-between align-items-center my-3">
                   <div class="add-user-btn d-flex gap-3 align-items-center">

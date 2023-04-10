@@ -130,8 +130,7 @@
             <div class="modal-content">
               <div class="modal-header remove-timeHeader d-flex justify-content-between">
               <h1 class="modal-title fs-5" id="exampleModalLabel">communication project</h1>
-              
-              <button type="button" class="btn-close remove-closeBtn" data-bs-dismiss="modal" aria-label="Close"></button>
+               <i class="fas fa-times fa-lg remove-closeBtn" data-bs-dismiss="modal" aria-label="Close"></i>
               </div>
               <div class="modal-body">
                  <div class="row">
@@ -175,9 +174,9 @@
                                 <input type="text" class="form-control" placeholder="" name="" />
                               </div>
                               <div class="col">
-                                <label>Durationssss(Hrs/mins)</label>
+                                <label>Duration(Hrs/mins)</label>
                                 <div class="d-flx gap-2 text-dark">
-                                  <select id="selectbox1 " class="w-50 meeting-duration">
+                                  <select id="selectbox1 text-dark" class="w-50 meeting-duration">
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -193,7 +192,7 @@
                                     <option value="12">12</option>
                                     
                                 </select>
-                                <select id="selectbox2" class="w-50">
+                                <select id="selectbox2 " class="text-dark w-50">
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>

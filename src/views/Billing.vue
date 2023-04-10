@@ -1,20 +1,13 @@
 <template>
-   <TopFilter/>
+         <TopFilter/>
              <div class="billing-top d-flex justify-content-between py-3">
-                <h5 class="billing-title">Billing</h5>
-                <div>
-                  <select class="primary-btn form-control border-0 " id="slectable5" >
-                    <option selected>Billing Details</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
+                
+              
                </div>
                <div class="row py-3">
                  <div class="col-lg-8">
                    <div class="billing-details-area bg-white rounded-3 p-3 h-100">
-                    <h5 class="billing-title">Billing details</h5>
+                   
                     <table class="table table-borderless">
                       <tbody>
                         <tr>
@@ -194,6 +187,7 @@ import TopFilter from '../components/includes/TopFilter.vue';
 export default {
     name: 'TimetrackdashboardBilling',
     components:{TopFilter},
+   
 
     data() {
         return {

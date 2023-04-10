@@ -2,25 +2,27 @@
    <div>
       <TopFilter/>
    </div>
-         <div class="project-title">
-            <h5 clss="py-4">Company Setting</h5>
-         </div>
+        
        
          <div class="row my-4">
             <div class="col-lg-4 ">
                <div class="compnay-details-left bg-white rounded-3 px-4 py-5 h-100">
-                  <p>Company details</p>
-                  <p>Configuration</p>
-                  <p>Permissions</p>
-                  <p>Billing</p>
-                  <p>Web & app privacy</p>
-                  <p>Work-life balance metrics</p>
-                  <p>Single Sign On (SSO)</p>
+                  <ul>
+                     <li>Company details</li>
+                     <li>Configuration</li>
+                     <li>Permissions</li>
+                     <li> <router-link to="/billing">Billing</router-link></li>
+                     <li>Permissions</li>
+                     <li>Web & app privacy</li>
+                     <li>Work-life balance metrics</li>
+                     <li>Single Sign On (SSO)</li>
+                  </ul>
+                 
                </div>
             </div>
             <div class="col-lg-8 ">
                <div class="compnay-details-right primary-bg rounded-3 px-4 py-5 h-100">
-                  <h5 class="project-title">Company details</h5>
+                
                   <form action="" method="" class="">
                      <div class="details-form my-3 p-3">
                         <label>Integrations’ status</label>
@@ -115,19 +117,19 @@
                      <p>Permissions</p>
                      <div class="company-switch-area">
                         <div class="form-check form-switch my-3">
-                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                           <input class="form-check-input main-input-check" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                            <label class="form-check-label" for="flexSwitchCheckDefault">Allow managers to ceate projects and tasks  </label>
                         </div>
                         <div class="form-check form-switch my-3">
-                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                           <input class="form-check-input main-input-check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                            <label class="form-check-label" for="flexSwitchCheckChecked">Allow managers to invite new users</label>
                         </div>
                         <div class="form-check form-switch my-3">
-                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                           <input class="form-check-input main-input-check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                            <label class="form-check-label" for="flexSwitchCheckChecked">Allow managers to set productivity ratings</label>
                         </div>
                         <div class="form-check form-switch  my-3">
-                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                           <input class="form-check-input main-input-check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                            <label class="form-check-label" for="flexSwitchCheckChecked">Allow managers to set work schedules</label>
                         </div>
                      </div>
@@ -164,7 +166,7 @@
                      </div>
                      <a href="">Learn more</a>
                      <div class="form-check form-switch  my-3">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <input class="form-check-input main-input-check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">Remove query parameters</label>
                      </div>
                      <h6>Work-life balance metrics</h6>
@@ -200,7 +202,7 @@
                         </select>
                      </div>
                      <div class="form-check form-switch  my-3">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <input class="form-check-input main-input-check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">Count work on weekends as a work-life balance issue</label>
                      </div>
                      <p>Single Sign On (SSO)</p>

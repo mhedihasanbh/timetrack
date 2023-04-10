@@ -1,24 +1,58 @@
 <template>
-<TopFilter/>
-<div class="user-wrapper bg-white p-2 my-3 ">
-   <!-----TOP AREA START----->
-   <div class="user-info-filter d-flex justify-content-between px-3">
-      <div class="user-info-title">
-         <h4>Users</h4>
-      </div>
-      <div class="user-info-right w-25">
-         <form action="" method="" class="d-flex gap-2 align-items-center">
-            <select class="form-select">
+ <div class="filter-left d-flex align-items-center flex-wrap bg-white rounded p-3 w-100 ">
+             <form action="" method="" class="project-filer d-flex gap-2">
+               <select class="form-select filter-by-week" aria-label="Default select example">
+                  <option selected>All Teams</option>
+                  <option value="1">
+                      All Team
+                  </option>
+                  <option value="2">Nasir Uddin</option>
+                  <option value="3">Mehedi</option>
+                  </select>
+                 
+                   <select class="form-select filter-by-week">
+                    <option selected>Project</option>
+                    <option value="1">Project Name 1</option>
+                    <option value="1">Project Name 2</option>
+                    <option value="2">Project Name 3</option>
+                    <option value="2">Project Name 4</option>
+                 </select>
+             
+                 <select class="form-select filter-by-week">
                <option selected>Name</option>
                <option value="1">sajib</option>
                <option value="2">mehedi</option>
             </select>
-            <select class="form-select">
+            <select class="form-select filter-by-week">
                <option value="1">Ascending</option>
                <option value="2">Descending</option>
             </select>
-         </form>
+                        
+                
+                   <select class="form-select filter-by-week">
+                     <option selected>Last Week</option>
+                     <option value="1">Last Month</option>
+                     <option value="2">Last year</option>
+                  </select>
+                  <a href="#" class="pt-2"> <i class="fa-solid fa-arrows-rotate"></i></a>
+               
+                 <div class="filter-btn w-100">
+                    <button type="submit" class="primary-btn p-2">Apply Filter</button> 
+                   
+                 </div>
+               </form>
+       </div>
+
+<div class="user-wrapper bg-white p-2 my-3 ">
+   <!-----TOP AREA START----->
+   <div class="user-info-filter d-flex justify-content-between px-3 py-3">
+     <div class="back">
+      <router-link to="/user"><i class="fa-solid fa-arrow-left fa-xl"></i></router-link>
+     </div>
+      <div class="user-info-title">
+         <h4>Users</h4>
       </div>
+     
    </div>
    <!-----TOP AREA END----->
    <div class="user-main-content my-3 rounded-3 px-4 py-4">
@@ -235,10 +269,10 @@
 </template>
 
 <script>
-import TopFilter from '../components/includes/TopFilter.vue';
+
 export default {
   name: 'TimetrackdashboardUser',
-  components:{TopFilter},
+  
 
   data() {
       return {

@@ -1,14 +1,16 @@
 <template>
-    <div>
+    <div v-if="loader">
+      <Loader/>
        <TopFilter/>
+       
     </div>
-    <div class="row g-0 py-5">
+    <div class="row g-0 py-5" v-if="!loading">
         <div class="col-lg-3">
             <div class="messanger-wrapper h-100">
                 <div class="messanger-user d-flex gap-2 my-2 p-3">
               <div class="messanger-user-image">
                <a href="#">
-                <img src="assets/images/fbuser1.jpg" class="rounded-circle" width="60" height="60"/>
+                <img src="assets/images/fbuser.png" class="rounded-circle" width="60" height="60"/>
                 </a>
               </div>
               <div class="user-content">
@@ -185,17 +187,24 @@
 
 <script>
  import TopFilter from '../components/includes/TopFilter.vue';
+ import Loader from '../components/includes/Loading.vue'
 export default {
     name: 'TimeMessanger',
-    components:{TopFilter},
+    components:{TopFilter,Loader},
     data() {
         return {
-            
+           loader:true 
         };
     },
 
     mounted() {
         
+    },
+    created(){
+      setTimeout(() => {
+      this.loader=false
+    }, 1000);
+      
     },
 
     methods: {

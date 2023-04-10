@@ -1,36 +1,57 @@
 <template>
-    <div class="my-4">
-      <TopFilter/>
-     </div>
-     <!--user---->
-    <div class="setting-user-area bg-white p-3">
-    <div class="project-top d-flex justify-content-between  py-3">
-        <h6 class="project-title">Users</h6>
-        <div>
-            <form action="" method="" class="user-filerForm d-flex gap-2 align-items-center">
-              <div>
+    
+      <div class="filter-left d-flex align-items-center flex-wrap bg-white rounded p-3 w-100 my-3">
+             <form action="" method="" class="project-filer d-flex gap-2">
+               <select class="form-select filter-by-week" aria-label="Default select example">
+                  <option selected>All Teams</option>
+                  <option value="1">
+                      All Team
+                  </option>
+                  <option value="2">Nasir Uddin</option>
+                  <option value="3">Mehedi</option>
+                  </select>
+                  
+                  
+              
                   <select id="selectbox3" class="form-control user-filterBtn decorated"  >
                   <option selected>All Users Selected</option>
                   <option value="1">sajib</option>
                   <option value="2">rakib</option>
           
               </select>
-              </div>
-              <div>
+             
+            
                   <select id="selectbox4" class="form-control user-filterBtn">
                   <option value="1" selected>All Access Levels Selected</option>
                   <option value="2">2.18</option>
               </select>
-              </div>
-              <div>
+             
+            
                   <select id="selectbox4" class="form-control user-filterBtn">
                   <option value="1" selected>Active Users</option>
                   <option value="2">2.18</option>
               </select>
-              </div>
-              
-          </form>
-        </div>
+             
+                   
+                
+                
+                   <select class="form-select filter-by-week">
+                     <option selected>Last Week</option>
+                     <option value="1">Last Month</option>
+                     <option value="2">Last year</option>
+                  </select>
+                  <a href="#" class="pt-2"> <i class="fa-solid fa-arrows-rotate"></i></a>
+               
+                 <div class="filter-btn w-100">
+                    <button type="submit" class="primary-btn p-2">Apply Filter</button> 
+                   
+                 </div>
+               </form>
+    </div>
+    <div class="setting-user-area bg-white p-3">
+    <div class="project-top d-flex justify-content-between  py-3">
+        <h6 class="project-title">Users</h6>
+      
       </div>
       
       <div class="add-user-arera d-flex justify-content-between align-items-center my-3">
@@ -277,7 +298,7 @@
               <div class="group-right-title d-flex justify-content-between py-3">
                  <strong>Users</strong>
                  <div class="form-check form-switch">
-                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                     <input class="form-check-input custom-input-check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                      <label class="form-check-label" for="flexSwitchCheckChecked">Show only users in group</label>
                   </div>
               </div>
@@ -411,10 +432,10 @@
 </template>
 
 <script>
-import TopFilter from '../components/includes/TopFilter.vue';
+
 export default {
     name: 'workScdule',
-    components:{TopFilter},
+  
 
     data() {
         return {
@@ -423,11 +444,73 @@ export default {
     },
 
     mounted() {
-        
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+        const dropZoneElement = inputElement.closest(".drop-zone");
+      
+        dropZoneElement.addEventListener("click", () => {
+          inputElement.click();
+        });
+      
+        inputElement.addEventListener("change", () => {
+          if (inputElement.files.length) {
+            this.updateThumbnail(dropZoneElement, inputElement.files[0]);
+          }
+        });
+      
+        dropZoneElement.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          dropZoneElement.classList.add("drop-zone--over");
+        });
+      
+        ["dragleave", "dragend"].forEach((type) => {
+          dropZoneElement.addEventListener(type, () => {
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+      
+        dropZoneElement.addEventListener("drop", (e) => {
+          e.preventDefault();
+      
+          if (e.dataTransfer.files.length) {
+            inputElement.files = e.dataTransfer.files;
+            this.updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+          }
+      
+          dropZoneElement.classList.remove("drop-zone--over");
+        });
+      });
     },
 
     methods: {
-        
+       updateThumbnail(dropZoneElement, file) {
+        let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+      
+        // First time - remove the prompt
+        if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+          dropZoneElement.querySelector(".drop-zone__prompt").remove();
+        }
+      
+        // First time - there is no thumbnail element, so lets create it
+        if (!thumbnailElement) {
+          thumbnailElement = document.createElement("div");
+          thumbnailElement.classList.add("drop-zone__thumb");
+          dropZoneElement.appendChild(thumbnailElement);
+        }
+      
+        thumbnailElement.dataset.label = file.name;
+      
+        // Show thumbnail for image files
+        if (file.type.startsWith("image/")) {
+          const reader = new FileReader();
+      
+          reader.readAsDataURL(file);
+          reader.onload = () => {
+            thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+          };
+        } else {
+          thumbnailElement.style.backgroundImage = null;
+        }
+      }
     },
 };
 </script>

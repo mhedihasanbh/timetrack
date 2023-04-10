@@ -44,7 +44,7 @@
                    <div class="sub-menu" v-show='toggleone'>
                      <router-link to="/user"              class="link" @click='toggleone = !toggleone' v-on:click='dropdown("toggleone")'>User</router-link>
                      <router-link to="/screenshotTwo"      class="link" @click='toggleone = !toggleone' v-on:click='dropdown("toggleone")'>Screenshots</router-link>
-                     <router-link to="/task"              class="link" @click='toggleone = !toggleone' v-on:click='dropdown("toggleone")'>Tasks</router-link>
+                     <!-- <router-link to="/task"              class="link" @click='toggleone = !toggleone' v-on:click='dropdown("toggleone")'>Tasks</router-link> -->
                      <router-link to="/webapp"      class="link" @click='toggleone = !toggleone' v-on:click='dropdown("toggleone")'>App Usage</router-link>
                      <router-link to="/attendance"        class="link" @click='toggleone = !toggleone' v-on:click='dropdown("toggleone")'>Attendance</router-link>
                      <router-link to="/productivityrating"          class="link" @click='toggleone = !toggleone' v-on:click='dropdown("toggleone")'>Productivity</router-link>
@@ -135,9 +135,18 @@
                   <li  id="profile">
                    <div class="title">
                      <router-link to="/profile" @click="pageLoad()">
-                     <div v-if="loading" class="spinner-border"></div>
+                   
                        <img src="assets/images/profile.png"/>
                        <span>Profile</span>
+                      </router-link>
+                     </div>
+                 </li>
+                 <li  id="profile">
+                   <div class="title">
+                     <router-link to="/messangerlogin">
+                   
+                       <img src="assets/images/profile.png"/>
+                       <span>messanger login</span>
                       </router-link>
                      </div>
                  </li>
