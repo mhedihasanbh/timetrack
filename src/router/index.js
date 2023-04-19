@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/Home.vue'
+import UserProfile from '../views/Userprofile.vue'
+import EditProfile from '../views/Editprofile.vue'
+import UserActivity from '../views/Useractivity.vue'
 import ProjectOne from '../views/ProjectOne.vue'
 import Project from '../views/Project.vue'
 import ActivitySummary from '../views/ActivitySummary.vue'
@@ -30,10 +33,7 @@ import UserSeeting from '../views/UserSeeting.vue'
 import WorkSchedule from '../views/WorkSchedule.vue'
 //setting dropdown page end
 import Messanger from '../views/Messanger.vue'
-import MessangerLogin from '../views/MessangerLogin.vue'
-import MessangerList from '../views/MessaangerList.vue'
-import Communication from '../views/Communication.vue'
-import MessangerHome from '../views/MesangerHome.vue'
+
 
 import Download from '../views/Download.vue'
 import Invite from '../views/Invite.vue'
@@ -46,6 +46,22 @@ const routes = [
       name: 'home',
       component: HomeView
     },
+    {
+      path: '/userprofile',
+      name: ' UserProfile',
+      component:UserProfile
+    },
+    {
+      path: '/editprofile',
+      name: 'editProfile',
+      component:EditProfile
+    },
+    {
+      path: '/useractivity',
+      name: 'useractivity',
+      component:UserActivity
+    },
+   
     {
       path: '/project',
       name: 'Project',
@@ -201,26 +217,7 @@ const routes = [
       name: 'messanger',
       component:Messanger
     },
-    {
-      path: '/messangerlogin',
-      name: 'MessangerLogin',
-      component:MessangerLogin
-    },
-    {
-      path: '/messangerlist',
-      name: 'Messangerlist',
-      component:MessangerList
-    },
-    {
-      path: '/communication',
-      name: 'communication',
-      component:Communication
-    },
-    {
-      path: '/messangerhome',
-      name: 'messangerhome',
-      component:MessangerHome
-    },
+    
  
    
     {

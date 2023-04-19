@@ -1,22 +1,3 @@
-.profile-dropdown{
-    width: 200px!important;
-    background-color: #F5F5F5;
-}
-.profile-dropdown  li {
-    padding: 12px 8px ;
-}
-.profile-dropdown  li a{
-    color: #000 ;
-}
-.notification-area{
-    width: 500px!important;
-    
-}
-.timesheet-dropdown{
-    border: none!important;
-    padding:40px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
 
 /*=================*/
 .header {
@@ -125,6 +106,61 @@
 }
 .right-toggle{
     display: none;
+}
+.profile-dropdown{
+    width: 200px!important;
+    background-color: #F5F5F5;
+}
+.profile-dropdown  li {
+    padding: 12px 8px ;
+}
+.profile-dropdown  li a{
+    color: #000 ;
+}
+.notification-area{
+    width: 500px!important;
+    
+}
+.timesheet-dropdown{
+    border: none!important;
+    padding:40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/*--profile page--*/
+.profile-image{
+    margin-top: -40px;
+}
+.user-info ul li{
+    color:#000;
+    padding: 26px 12px;
+    padding-left: 69px;
+    font-size: 17px;
+}
+.user-info ul li i {
+    margin-right: 19px;
+}
+/*--user edit/update---*/
+.user-update input{
+    background-color: #FCFCFC; 
+}
+.user-update input:focus {
+    color: none !important;;
+    background-color: none!important;
+    border-color:none !important;
+    outline: 0;
+    box-shadow:none!important;
+}
+/*--user activites--*/
+.activities-text{
+    color:#000;
+}
+.activites-table table th{
+    background-color: #42375B;
+    color:#fff;
+}
+.activites-table table td{
+    background-color: #B5C7DE!important;
+    
 }
 /* LEFT SIDEBAR STYLE */
 .dpColor{
@@ -786,6 +822,20 @@ text-align: justify;
 .productivity-contentBox{
     background-color: #F7FAFF;
 }
+.pagination{
+   border-radius: 0!important;
+}
+.page-link{
+    color:#000!important;
+}
+.page-item:first-child .page-link {
+    background-color: #42375B!important;
+    border-top-left-radius:none!important;
+    border-bottom-left-radius:none!important;
+    color:#fff!important
+    ;
+  }
+
 /*-----productivity end-----*/
 /*===========board=========*/
 .board-top span{
@@ -1217,76 +1267,103 @@ font-weight: 700;
 .scresnshoot-overly{
     position: relative;
 }
-/* .download-image{
-    content:'';
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:100%;
-    height:100%;
-    background: rgba(0, 0, 0, 0.5);
-  } */
-/*POP UP IMAGE*/
-.image-link {
-    cursor: -webkit-zoom-in;
-    cursor: -moz-zoom-in;
-    cursor: zoom-in;
+/*screen shoot extra code*/
+.galary .image img{
+    width: 230px;
+    height: 172px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+.galary .image:hover img{
+    transform: scale(1.11);
+}
+.galary span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+  .preview-box{
+    position: fixed;
+    max-width: 700px;
+    width: 100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(0.9);
+    background-color: #fff;
+    padding: 0 5px 5px 5px;
+    border-radius: 3px;
+    box-shadow: rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 5;
   }
-  
-  
-  /* This block of CSS adds opacity transition to background */
-  .mfp-with-zoom .mfp-container,
-  .mfp-with-zoom.mfp-bg {
-      opacity: 0;
-      -webkit-backface-visibility: hidden;
-      -webkit-transition: all 0.3s ease-out; 
-      -moz-transition: all 0.3s ease-out; 
-      -o-transition: all 0.3s ease-out; 
-      transition: all 0.3s ease-out;
+  .details .icon{
+    font-size: 20px;
+    font-weight: 600;
+    color:#000;
+    cursor: pointer;
   }
-  
-  .mfp-with-zoom.mfp-ready .mfp-container {
-          opacity: 1;
+  .details span{
+    font-size: 20px;
+    font-weight: 600;
+    color:#000;
   }
-  .mfp-with-zoom.mfp-ready.mfp-bg {
-          opacity: 0.8;
+  .preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    transform: translate(-50%,-50%) scale(1);
   }
-  
-  .mfp-with-zoom.mfp-removing .mfp-container, 
-  .mfp-with-zoom.mfp-removing.mfp-bg {
-      opacity: 0;
+  .preview-box .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  /* padding-bottom and top for image */
-  .mfp-no-margins img.mfp-img {
-      padding: 0;
+  .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
   }
-  /* position of shadow behind the image */
-  .mfp-no-margins .mfp-figure:after {
-      top: 0;
-      bottom: 0;
+  .details .title p{
+    margin: 0 5px;
   }
-  /* padding for main container */
-  .mfp-no-margins .mfp-container {
-      padding: 0;
+  .preview-box .image-box{
+    display: flex;
+    width: 100%;
   }
-  
-  
-  
-  /* aligns caption to center */
-  .mfp-title {
-    text-align: center;
-    padding: 6px 0;
+   .image-box img{
+   
+    width: 690px;
+    height: 516px;
   }
-  .image-source-link {
-    color: #DDD;
-  }
-  .remove-timeHeader{
-    background-color: #42375B;
+  .image-box .slide{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 30px;
     color:#fff;
+    cursor:pointer;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    z-index: 3;
   }
-  .remove-closeBtn{
-    color: #fff!important;
+  .image-box .slide.preview{
+    left:0;
+  }
+  .image-box .slide.next{
+    right: 0;
+  }
+  .shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: none;
   }
 /*screenshoot  end*/
 

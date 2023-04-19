@@ -1,10 +1,12 @@
 <template>
-   <div>
+   <div class="profile-loader"  v-if="loader">
+     <Loader/>
+  </div>
+  <div v-if="!loader">
+   <div class="my-2">
       <TopFilter/>
    </div>
-        
-       
-         <div class="row my-4">
+   <div class="row my-4">
             <div class="col-lg-4 ">
                <div class="compnay-details-left bg-white rounded-3 px-4 py-5 h-100">
                   <ul>
@@ -210,25 +212,35 @@
                   </form>
                </div>
             </div>
-         </div>
+         </div>     
+       
+        
+  </div>
+   
      
 </template>
 
 <script>
+import Loader from '../components/includes/Loading.vue'
 import TopFilter from '../components/includes/TopFilter.vue';
 export default {
-    name: 'TimetrackdashboardCompnay',
-    components:{TopFilter},
+    name: 'TimetrackCompnay',
+    components:{Loader,TopFilter},
 
     data() {
         return {
-            
+            loader:true
         };
     },
 
     mounted() {
         
     },
+    created(){
+        setTimeout(() => {
+        this.loader=false
+      }, 1000);
+},
 
     methods: {
         

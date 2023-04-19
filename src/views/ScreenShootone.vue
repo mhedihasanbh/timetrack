@@ -1,5 +1,9 @@
 <template>
- <div class="filter-left d-flex align-items-center flex-wrap bg-white rounded p-3 w-100 ">
+   <div class="profile-loader"  v-if="loader">
+     <Loader/>
+  </div>
+  <div v-if="!loader">
+   <div class="filter-left d-flex align-items-center flex-wrap bg-white rounded p-3 w-100 ">
              <form action="" method="" class="project-filer d-flex gap-2">
                <select class="form-select filter-by-week" aria-label="Default select example">
                   <option selected>All Teams</option>
@@ -265,25 +269,31 @@
       </div>
       <!----BOTTOM TABLE END----->
    </div>
-</div>     
+</div> 
+  </div>
+    
 </template>
 
 <script>
-
+import Loader from '../components/includes/Loading.vue'
 export default {
   name: 'TimetrackdashboardUser',
-  
+  componets:{Loader},
 
   data() {
       return {
-          
+          loader:true
       };
   },
 
   mounted() {
       
   },
-
+  created(){
+        setTimeout(() => {
+        this.loader=false
+      }, 1000);
+},
   methods: {
       
   },

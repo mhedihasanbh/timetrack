@@ -167,3 +167,7 @@ ovh{
     color:#181818;
     font-weight: 600;
 }
+select:focus {
+    outline: none !important;
+    box-shadow:none!important;
+  }

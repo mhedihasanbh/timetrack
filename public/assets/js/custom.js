@@ -1,11 +1,7 @@
-//invite file upload
-
-    
-      
-      
-      //board
-      const sortableList = document.querySelector(".sortable-list");
+ //board
+       const sortableList = document.querySelector(".sortable-list");
       const items = sortableList.querySelectorAll(".item");
+      console.log(items);
       items.forEach(item => {
           item.addEventListener("dragstart", () => {
               // Adding dragging class to item after a delay
@@ -61,5 +57,4 @@
         
       }
       sortableList.addEventListener("dragenter", e => e.preventDefault());
-      
 

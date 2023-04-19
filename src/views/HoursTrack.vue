@@ -1,6 +1,4 @@
 <template>
-
-       
               <div class="project-top d-flex justify-content-between ">
                 <div><h5>Hours Tracked</h5></div>
                 </div>

@@ -1,5 +1,9 @@
 <template>
- <!-----TOP SECTION START----->
+   <div class="profile-loader"  v-if="loader">
+       <Loader/>
+    </div>
+    <div v-if="!loader">
+      <!-----TOP SECTION START----->
 <div class="top-filter-area bg-white rounded p-3 d-flex justify-content-between">
    <div class="filter-left d-flex align-items-center flex-wrap gap-4">
       <h5>Overview</h5>
@@ -373,21 +377,28 @@
    </table>
 </div>
 <!-----TABLE END----->
+    </div>
+ 
 </template>
 
 <script>
+import Loader from '../components/includes/Loading.vue'
 import ApexCharts from 'apexcharts'
 export default {
     name: 'TimetrackdashboardHome',
-   
+   components:{Loader},
 
     data() {
         return {
-        
+        loader:true
     }
         
     },
-
+    created(){
+          setTimeout(() => {
+          this.loader=false
+        }, 1000);
+      },
     mounted() {
         //PRODUCTIVITY CHART
      var options = {
@@ -808,9 +819,7 @@ export default {
     methods: {
      
     },
-    components:{
-      
-    }
+    
 };
 </script>
 

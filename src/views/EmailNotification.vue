@@ -1,5 +1,9 @@
 <template>
-         <div class="notification-title d-flex justify-content-between py-4">
+   <div class="profile-loader"  v-if="loader">
+     <Loader/>
+  </div>
+  <div v-if="!loader">
+   <div class="notification-title d-flex justify-content-between py-4">
             <h5 clss="py-4">Email Notifications</h5>
             <div class="add-user-btn ">
                <a href="#" class="primary-btn px-3 py-2 rounded-2" data-bs-toggle="modal" data-bs-target="#emailNotification">
@@ -41,9 +45,7 @@
                </div>
             </div>
          </div>
-       
-
-         <div class="email-notification-area bg-white rounded-3 px-4 py-4 h-100 ">
+        <div class="email-notification-area bg-white rounded-3 px-4 py-4 h-100 ">
             <div class="d-flex flex-column justify-content-center align-items-center py-5">
                <a href="">
                   <img src="assets/images/emailnotification.png"/>
@@ -52,22 +54,31 @@
                <p>You can create notifications for yourself by clicking on Create New at the top left</p>
             </div>
          </div>
+  </div>
+         
       
 </template>
 
 <script>
+ import Loader from '../components/includes/Loading.vue'
 export default {
-    name: 'TimetrackdashboardEmailNotification',
+    name: 'TimetrackNotification',
+    components:{Loader},
 
     data() {
         return {
-            
+         loader:true
         };
     },
 
     mounted() {
         
     },
+    created(){
+        setTimeout(() => {
+        this.loader=false
+      }, 1000);
+},
 
     methods: {
         
